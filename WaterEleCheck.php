@@ -70,7 +70,6 @@
      $topUpRecord["date"][$intI]=explode($thisYear,explode(" ",strval($temp[6]->plaintext))[2])[1];
      $intI++;
  }
-
  $isExist="yes";
  if($waterRecord[0]==NULL)
  {
@@ -119,9 +118,6 @@
  }
  $waterAverageOfSix=round($temp1/$WaterCount,3);
  $eleAverageOfSix=round($temp2/$eleCount,3);
-
-
-
  $waterCanUseDayNum=1;
  $eleCanUseDayNum=1;
  if($waterAverageOfThree>0)
@@ -141,13 +137,15 @@
      "userAverageOfDayOfThree"=>$waterAverageOfThree,
      "userAverageOfDayOfSix"=>$waterAverageOfSix,
      "userEndDate"=>$waterEndDate,
-     "history"=>array("left"=>array(6),"date"=>array(6))
+     "history"=>array("left"=>array(6),"date"=>array(6)),
+     "leftDay"=>$waterCanUseDayNum
 ), "eleRecord"=>array(
      "now"=>$eleRecord[0],
      "userAverageOfDayOfThree"=>$eleAverageOfThree,
      "userAverageOfDayOfSix"=>$eleAverageOfSix,
      "userEndDate"=>$eleEndDate,
-     "history"=>array("left"=>array(6),"date"=>array(6))
+     "history"=>array("left"=>array(6),"date"=>array(6)),
+     "leftDay"=>$eleCanUseDayNum
  )
      ,"topUpRecord"=>array("money"=>array(6),"type"=>array(6),"date"=>array(6))
      ,"isExist"=>$isExist

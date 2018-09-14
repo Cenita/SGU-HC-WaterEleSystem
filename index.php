@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <?php
+      error_reporting(E_ALL^E_NOTICE^E_WARNING);
      session_start();
      $sendKey=md5(time());
      $_SESSION['key']=$sendKey;
@@ -28,20 +29,20 @@
       <div class="roomPart">
         <span class="title">房间号：</span>
         <div class="ui input">
-          <input type="number" data="<?php echo $_SESSION["roomId"]?>" id="roomIdButton" v-model="roomId" placeholder="(例如104)">
+          <input type="number" data="<?php $t=$_SESSION["roomId"];echo $t;?>" id="roomIdButton" v-model="roomId" placeholder="(例如104)">
         </div>
       </div>
       <div class="buildingPart">
         <span class="title">楼层编号：</span>
-        <select class="ui dropdown" data="<?php echo $_SESSION["buildingId"]?>"  v-model="buildingId" size="6"  id="buildingId">
+        <select class="ui dropdown" data="<?php $t=$_SESSION["buildingId"];echo $t;?>"  v-model="buildingId" size="6"  id="buildingId">
           <option value="1177">碧桃21栋</option>
           <option value="1250">碧桃24栋</option>
+          <option value="1623">碧桃25栋</option>
+          <option value="1649">碧桃27栋</option>
           <option value="1332">碧桃28栋</option>
           <option value="1366">碧桃29栋</option>
           <option value="1426">丹桂22栋</option>
           <option value="1486">丹桂23栋</option>
-          <option value="1623">碧桃25栋</option>
-          <option value="1649">碧桃27栋</option>
           <option value="1688">丹竹A栋</option>
           <option value="1811">丹竹B栋</option>
           <option value="1924">丹竹C栋</option>
@@ -143,6 +144,9 @@
             </div>
             <div id="eleGraph" class="graph"></div>
             <div id="eleValueGraph" class="graph"></div>
+            <div class="aiPart">
+              <span>小创AI：{{eleHint}}</span>
+            </div>
           </div>
         </div>
       </div>
@@ -166,6 +170,9 @@
             </div>
             <div id="waterGraph" class="graph"></div>
             <div id="waterValueGraph" class="graph"></div>
+            <div class="aiPart">
+              <span>小创AI：{{waterHint}}</span>
+            </div>
           </div>
         </div>
       </div>

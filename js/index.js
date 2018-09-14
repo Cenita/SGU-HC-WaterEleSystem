@@ -19,7 +19,9 @@ $(
       averEleOfThree:"15",
       eleEndDate:"2018-3-25",
       roomName:"错误",
-      judgeExist:false
+      judgeExist:false,
+      waterHint:"你好呀",
+      eleHint:"你好哦"
     }})
     $('.ui.dropdown').dropdown();
     $("#roomIdButton").change(
@@ -98,6 +100,59 @@ $(
             sendStyle.eleEndDate=re.eleRecord.userEndDate;
             //列表
             initionGraph(re);
+            //小创ai
+            var aiText="";
+            var eleInMoney=(30-re.eleRecord.leftDay)*re.eleRecord.userAverageOfDayOfSix;
+            eleInMoney=eleInMoney.toFixed(0);
+            if(re.eleRecord.leftDay<=10)
+            {
+              if(eleInMoney!=0)
+              aiText="电费快不够了哦！小创建议你充值"+eleInMoney+"元";
+              else {aiText="哦嚯！这间宿舍好像存在一些问题";}
+            }
+            else if(re.eleRecord.leftDay<=5)
+            {
+              if(eleInMoney!=0)
+              aiText="快停电啦！小创建议你充"+eleInMoney+"元";
+              else {aiText="哦嚯！这间宿舍好像存在一些问题";}
+            }
+            else if(re.eleRecord.leftDay<=30&&re.eleRecord.leftDay>=20)
+            {aiText="还不用担心电费问题哦！";}
+            else if(re.eleRecord.leftDay<=20&&re.eleRecord.leftDay>=10)
+            {aiText="剩余电费还能用一段时间呢！"}
+            else if(re.eleRecord.leftDay>=30)
+            {aiText="电力十足！！能用很久呢！！！"}
+            sendStyle.eleHint=aiText;
+            var aiText="";
+            var waterInMoney=(30-re.waterRecord.leftDay)*re.waterRecord.userAverageOfDayOfSix;
+            waterInMoney=waterInMoney.toFixed(0);
+            if(re.waterRecord.leftDay<=10)
+            {
+              if(waterInMoney!=0)
+              {aiText="水费快不够了哦！小创建议你充值"+waterInMoney+"元";}
+              else
+              {aiText="哦嚯！这间宿舍好像存在一些问题";}
+            }
+            else if(re.waterRecord.leftDay<=5)
+            {
+              if(waterInMoney!=0)
+              {aiText="快停水了哦！小创建议你充值"+waterInMoney+"元";}
+              else
+              {aiText="哦嚯！这间宿舍好像存在一些问题";}
+            }
+            else if(re.waterRecord.leftDay<=20&&re.waterRecord.leftDay>10)
+            {
+              aiText="水费还能用一段时间哦！";
+            }
+            else if(re.waterRecord.leftDay<=30&&re.waterRecord.leftDay>=20)
+            {
+              aiText="可以放心一段时间了";
+            }
+            else if(re.waterRecord.leftDay>=30)
+            {
+              aiText="水还能用很久！我们来打水仗吧！";
+            }
+            sendStyle.waterHint=aiText;
             for(var i=0;i<6;i++)
             {
               //v-else="sendPost"
