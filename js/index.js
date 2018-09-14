@@ -104,7 +104,7 @@ $(
             var aiText="";
             var eleInMoney=(30-re.eleRecord.leftDay)*re.eleRecord.userAverageOfDayOfSix;
             eleInMoney=eleInMoney.toFixed(0);
-            if(re.eleRecord.leftDay<=10)
+            if(re.eleRecord.leftDay>5&&re.eleRecord.leftDay<=10)
             {
               if(eleInMoney!=0)
               aiText="电费快不够了哦！小创建议你充值"+eleInMoney+"元";
@@ -126,7 +126,7 @@ $(
             var aiText="";
             var waterInMoney=(30-re.waterRecord.leftDay)*re.waterRecord.userAverageOfDayOfSix;
             waterInMoney=waterInMoney.toFixed(0);
-            if(re.waterRecord.leftDay<=10)
+            if(re.waterRecord.leftDay>5&&re.waterRecord.leftDay<=10)
             {
               if(waterInMoney!=0)
               {aiText="水费快不够了哦！小创建议你充值"+waterInMoney+"元";}
