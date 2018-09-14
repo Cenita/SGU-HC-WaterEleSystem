@@ -1,8 +1,8 @@
 ﻿<!DOCTYPE html>
 <?php
-    // session_start();
-    // $sendKey=md5(time());
-    // $_SESSION['key']=$sendKey;
+     session_start();
+     $sendKey=md5(time());
+     $_SESSION['key']=$sendKey;
 ?>
 <html lang="en">
 <head>
@@ -28,12 +28,12 @@
       <div class="roomPart">
         <span class="title">房间号：</span>
         <div class="ui input">
-          <input type="number" id="roomIdButton" v-model="roomId" placeholder="(例如104)">
+          <input type="number" data="<?php echo $_SESSION["roomId"]?>" id="roomIdButton" v-model="roomId" placeholder="(例如104)">
         </div>
       </div>
       <div class="buildingPart">
         <span class="title">楼层编号：</span>
-        <select class="ui dropdown" v-model="buildingId" size="6"  id="buildingId">
+        <select class="ui dropdown" data="<?php echo $_SESSION["buildingId"]?>"  v-model="buildingId" size="6"  id="buildingId">
           <option value="1177">碧桃21栋</option>
           <option value="1250">碧桃24栋</option>
           <option value="1332">碧桃28栋</option>
@@ -100,7 +100,6 @@
     <div style="display:none"  v-show="partSeen" class="getPart">
       <div class="ui loading segment" v-show="loading"   style="height:300px;z-index:-20;">
       </div>
-
       <div class="ui raised segment" v-show="sendPost" id="inPart" >
         <h4 class="ui horizontal divider header">{{roomName}}</h4>
         <div id="getBasicInformation">

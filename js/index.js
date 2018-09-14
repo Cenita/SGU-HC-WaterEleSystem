@@ -7,8 +7,8 @@ $(
     data:{
       sendPost:false,
       loading:false,
-      roomId:"211",
-      buildingId:"4369",
+      roomId:$(".roomPart input").attr("data"),
+      buildingId:$(".buildingPart .dropdown").attr("data"),
       partSeen:false,
       waterRecord:"156.8",
       eleRecord:"20.6",
