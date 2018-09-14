@@ -117,7 +117,7 @@
             <span class="title">预测停水日期：</span>
             <span class="content">{{waterEndData}}</span>
           </div>
-          <div class="graphPart" style="position:relative;top:-20px">
+          <div class="graphPart" style="position:relative;top:-20px;left:-10px">
             <div class="averageOfSixDay topInformation">
               <span class="title">六日平均：</span>
               <span class="content">{{averWaterOfSix}}元</span>
@@ -136,7 +136,7 @@
             <span class="title">预测停电日期：</span>
             <span class="content">{{eleEndDate}}</span>
           </div>
-          <div class="graphPart" style="position:relative;top:-20px">
+          <div class="graphPart" style="position:relative;top:-20px;left:-10px">
             <div class="averageOfSixDay topInformation">
               <span class="title">六日平均：</span>
               <span class="content">{{averEleOfSix}}元</span>
@@ -149,8 +149,8 @@
             <div id="eleValueGraph" class="graph"></div>
           </div>
         </div>
-        <h4 class="ui horizontal divider header">充值记录表</h4>
-        <div id="TopUpPart">
+        <h4 class="ui horizontal divider header" style="display:none">充值记录表</h4>
+        <div id="TopUpPart" style="display:none">
           <div class="ui middle aligned list">
             <div class="item">
               <div>充值金额</div>

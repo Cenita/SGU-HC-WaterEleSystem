@@ -178,6 +178,33 @@ $(
       }
       waterDivideValue[0]=waterDivideValue[0]==0?waterAverage:waterDivideValue[0];
       eleDivideValue[0]=eleDivideValue[0]==0?eleAverage:eleDivideValue[0];
+      wValue = {
+          xAxis: {
+              type: 'category',
+              data: [waterDataDate[0], waterDataDate[1], waterDataDate[2],waterDataDate[3],waterDataDate[4]]
+          },
+          yAxis: {
+              name: "日用",
+              type: 'value'
+          },
+          tooltip:{
+            //trigger:'axis'
+          },
+          series: [
+          {
+            name: "日用",
+            data: [waterDivideValue[0], waterDivideValue[1], waterDivideValue[2], waterDivideValue[3], waterDivideValue[4]],
+            type: 'line',
+            color: "#9e9e9e",
+            smooth: true
+          },
+          {
+              name: "日用",
+              data: [waterDivideValue[0], waterDivideValue[1], waterDivideValue[2], waterDivideValue[3], waterDivideValue[4]],
+              type: 'bar',
+              color: "#80beff"
+          }]
+      };
       wMoney = {
             xAxis: {
                 type: 'category',
@@ -200,7 +227,7 @@ $(
                 color:"#035faa"
             }]
         };
-      wValue = {
+      eValue = {
           xAxis: {
               type: 'category',
               data: [waterDataDate[0], waterDataDate[1], waterDataDate[2],waterDataDate[3],waterDataDate[4]]
@@ -215,15 +242,16 @@ $(
           series: [
           {
             name: "日用",
-            data: [waterDivideValue[0], waterDivideValue[1], waterDivideValue[2], waterDivideValue[3], waterDivideValue[4]],
+            data: [eleDivideValue[0], eleDivideValue[1], eleDivideValue[2], eleDivideValue[3], eleDivideValue[4]],
             type: 'line',
+            color: "#9e9e9e",
             smooth: true
           },
           {
               name: "日用",
-              data: [waterDivideValue[0], waterDivideValue[1], waterDivideValue[2], waterDivideValue[3], waterDivideValue[4]],
+              data: [eleDivideValue[0], eleDivideValue[1], eleDivideValue[2], eleDivideValue[3], eleDivideValue[4]],
               type: 'bar',
-              color: "#80beff"
+              color: "#FF9900"
           }]
       };
       eMoney = {
@@ -245,35 +273,9 @@ $(
                 data: [eleDataMoney[0], eleDataMoney[1],eleDataMoney[2], eleDataMoney[3],eleDataMoney[4],eleDataMoney[5]],
                 type: 'line',
                 areaStyle: {},
-                color:"#9c9a1b"
+                color:"#e68b00"
             }]
         };
-      eValue = {
-          xAxis: {
-              type: 'category',
-              data: [waterDataDate[0], waterDataDate[1], waterDataDate[2],waterDataDate[3],waterDataDate[4]]
-          },
-          yAxis: {
-              name: "日用",
-              type: 'value'
-          },
-          tooltip:{
-            //trigger:'axis'
-          },
-          series: [
-          {
-            name: "日用",
-            data: [eleDivideValue[0], eleDivideValue[1], eleDivideValue[2], eleDivideValue[3], eleDivideValue[4]],
-            type: 'line',
-            smooth: true
-          },
-          {
-              name: "日用",
-              data: [eleDivideValue[0], eleDivideValue[1], eleDivideValue[2], eleDivideValue[3], eleDivideValue[4]],
-              type: 'bar',
-              color: "#9c9a1b"
-          }]
-      };
       eleValue.setOption(eMoney);
       eleMoney.setOption(eValue);
       waterValue.setOption(wMoney);
