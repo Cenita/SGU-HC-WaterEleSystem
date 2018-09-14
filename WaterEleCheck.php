@@ -4,13 +4,13 @@
  $cookie_jar = "pic.cookie";
  header("content-Type: text/html; charset=Utf-8");
  session_start();
- $dokey=strval($_SESSION['key']);
- $getKey=strval($_GET["dokey"]);
- if($dokey!=$getKey||$dokey=="")
- {
-     echo "error";
-     return;
- }
+// $dokey=strval($_SESSION['key']);
+// $getKey=strval($_GET["dokey"]);
+// if($dokey!=$getKey||$dokey=="")
+// {
+//     echo "error";
+//     return;
+// }
  //爬虫
  $roomMate=$_GET["roomId"];
  $buildingId=$_GET["buildingId"];
