@@ -100,6 +100,7 @@
     <div style="display:none"  v-show="partSeen" class="getPart">
       <div class="ui loading segment" v-show="loading"   style="height:300px;z-index:-20;">
       </div>
+
       <div class="ui raised segment" v-show="sendPost" id="inPart" >
         <h4 class="ui horizontal divider header">{{roomName}}</h4>
         <div id="getBasicInformation">
@@ -112,6 +113,18 @@
             <span class="content">{{ eleRecord }}元</span>
           </div>
         </div>
+        <h4 class="ui horizontal divider header" style="display:none">充值记录表</h4>
+        <div id="TopUpPart" style="display:none">
+          <div class="ui middle aligned list">
+            <div class="item">
+              <div>充值金额</div>
+              <div>充值类型</div>
+              <div>日期</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ui raised segment" v-show="sendPost">
         <h4 class="ui horizontal divider header" style="color:#FF9900">
           <i class="fa fa-flash"></i>
         </h4>
@@ -133,6 +146,8 @@
             <div id="eleValueGraph" class="graph"></div>
           </div>
         </div>
+      </div>
+      <div class="ui raised segment" v-show="sendPost">
         <h4 class="ui horizontal divider header" style="color:#167fd4">
           <i class="fa fa-tint"></i>
         </h4>
@@ -152,16 +167,6 @@
             </div>
             <div id="waterGraph" class="graph"></div>
             <div id="waterValueGraph" class="graph"></div>
-          </div>
-        </div>
-        <h4 class="ui horizontal divider header" style="display:none">充值记录表</h4>
-        <div id="TopUpPart" style="display:none">
-          <div class="ui middle aligned list">
-            <div class="item">
-              <div>充值金额</div>
-              <div>充值类型</div>
-              <div>日期</div>
-            </div>
           </div>
         </div>
       </div>
