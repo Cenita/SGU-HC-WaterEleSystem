@@ -7,8 +7,8 @@ $(
     data:{
       sendPost:false,
       loading:false,
-      roomId:"",
-      buildingId:"",
+      roomId:"211",
+      buildingId:"4369",
       partSeen:false,
       waterRecord:"156.8",
       eleRecord:"20.6",
@@ -95,11 +95,10 @@ $(
             sendStyle.averEleOfThree=re.eleRecord.userAverageOfDayOfThree;
             sendStyle.eleEndDate=re.eleRecord.userEndDate;
             //列表
+            initionGraph(re);
             for(var i=0;i<6;i++)
             {
               //v-else="sendPost"
-              $("#sixDayWaterPart .weList").append("<div class=\"item eleItem\"><div>"+re.waterRecord.history.left[i]+"</div><div>"+re.waterRecord.history.date[i]+"</div></div>");
-              $("#sixDayElePart .weList").append("<div class=\"item eleItem\"><div>"+re.eleRecord.history.left[i]+"</div><div>"+re.eleRecord.history.date[i]+"</div></div>");
               $("#TopUpPart .list").append("<div class=\"item eleItem\"><div>"+re.topUpRecord.money[i]+"</div><div>"+re.topUpRecord.type[i]+"</div><div>"+re.topUpRecord.date[i]+"</div></div>");
             }
           },
@@ -107,14 +106,179 @@ $(
           {
             //alert("查询失败");
             //sendStyle.partSeen=false;
+            initionGraph(re);
             $(".inCheck").removeClass("inCheck");
             alert("发生错误");
-            sendStyle.sendPost=false;
+            sendStyle.sendPost=true;
             sendStyle.loading=false;
             console.log("查询失败");
           }
         })
       }
     )
+    function initionGraph(data)
+    {
+      var waterMoney = echarts.init(document.getElementById('waterGraph'));
+      var waterValue = echarts.init(document.getElementById('waterValueGraph'));
+      var eleMoney = echarts.init(document.getElementById('eleGraph'));
+      var eleValue = echarts.init(document.getElementById('eleValueGraph'));
+      var waterDataDate=new Array(6);
+      var eleDataMoney=new Array(6);
+      var eleDivideValue=new Array(5);
+      var waterDataMoney= new Array(6);
+      var waterDivideValue=new Array(5);
+      var minEleValue=9999;
+      var minWaterValue=9999;
+      var j=5;
+      var eleAverage=0;
+      var waterAverage=0;
+      for(var i=0;i<6;i++)
+      {
+        waterDataDate[i]=data.waterRecord.history.date[j];
+        waterDataMoney[i]=data.waterRecord.history.left[j];
+        eleDataMoney[i]=data.eleRecord.history.left[j];
+        minEleValue=minEleValue<Number(eleDataMoney[i])?minEleValue:Number(eleDataMoney[i]);
+        minWaterValue=minWaterValue<Number(waterDataMoney[i])?minWaterValue:Number(waterDataMoney[i]);
+        if(i!=5)
+        {
+          eleDivideValue[i]=data.eleRecord.history.left[j]-data.eleRecord.history.left[j-1];
+          waterDivideValue[i]=data.waterRecord.history.left[j]-data.waterRecord.history.left[j-1];
+          if(waterDivideValue[i]<0)
+          {
+            if(i==0)
+            {
+              waterDivideValue[i]=0;
+            }
+            else {
+              waterDivideValue[i]=waterAverage;
+            }
+          }
+          else {
+            waterAverage+=waterDivideValue[i];
+            waterAverage/=2;
+            waterDivideValue[i]=waterDivideValue[i].toFixed(2);
+          }
+          if(eleDivideValue[i]<0)
+          {
+            if(i==0)
+            {
+              eleDivideValue[i]=0;
+            }
+            else {
+              eleDivideValue[i]=eleAverage;
+            }
+          }
+          else {
+            eleAverage+=eleDivideValue[i];
+            eleAverage/=2;
+            eleDivideValue[i]=eleDivideValue[i].toFixed(2);
+          }
+        }
+        j--;
+      }
+      waterDivideValue[0]=waterDivideValue[0]==0?waterAverage:waterDivideValue[0];
+      eleDivideValue[0]=eleDivideValue[0]==0?eleAverage:eleDivideValue[0];
+      wMoney = {
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: [waterDataDate[0], waterDataDate[1], waterDataDate[2], waterDataDate[3],waterDataDate[4],waterDataDate[5]],
+            },
+            yAxis: {
+                type: 'value',
+                name: "余额",
+                min:Math.floor(minWaterValue/10)*10
+            },
+            tooltip:{
+              trigger:'axis'
+            },
+            series: [{
+                name: "余额",
+                data: [waterDataMoney[0], waterDataMoney[1],waterDataMoney[2], waterDataMoney[3],waterDataMoney[4],waterDataMoney[5]],
+                type: 'line',
+                areaStyle: {},
+                color:"#035faa"
+            }]
+        };
+      wValue = {
+          xAxis: {
+              type: 'category',
+              data: [waterDataDate[0], waterDataDate[1], waterDataDate[2],waterDataDate[3],waterDataDate[4]]
+          },
+          yAxis: {
+              name: "日用",
+              type: 'value'
+          },
+          tooltip:{
+            //trigger:'axis'
+          },
+          series: [
+          {
+            name: "日用",
+            data: [waterDivideValue[0], waterDivideValue[1], waterDivideValue[2], waterDivideValue[3], waterDivideValue[4]],
+            type: 'line',
+            smooth: true
+          },
+          {
+              name: "日用",
+              data: [waterDivideValue[0], waterDivideValue[1], waterDivideValue[2], waterDivideValue[3], waterDivideValue[4]],
+              type: 'bar',
+              color: "#80beff"
+          }]
+      };
+      eMoney = {
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: [waterDataDate[0], waterDataDate[1], waterDataDate[2], waterDataDate[3],waterDataDate[4],waterDataDate[5]],
+            },
+            yAxis: {
+                type: 'value',
+                name: "余额",
+                min:Math.floor(minWaterValue/10)*10
+            },
+            tooltip:{
+              trigger:'axis'
+            },
+            series: [{
+                name: "余额",
+                data: [eleDataMoney[0], eleDataMoney[1],eleDataMoney[2], eleDataMoney[3],eleDataMoney[4],eleDataMoney[5]],
+                type: 'line',
+                areaStyle: {},
+                color:"#9c9a1b"
+            }]
+        };
+      eValue = {
+          xAxis: {
+              type: 'category',
+              data: [waterDataDate[0], waterDataDate[1], waterDataDate[2],waterDataDate[3],waterDataDate[4]]
+          },
+          yAxis: {
+              name: "日用",
+              type: 'value'
+          },
+          tooltip:{
+            //trigger:'axis'
+          },
+          series: [
+          {
+            name: "日用",
+            data: [eleDivideValue[0], eleDivideValue[1], eleDivideValue[2], eleDivideValue[3], eleDivideValue[4]],
+            type: 'line',
+            smooth: true
+          },
+          {
+              name: "日用",
+              data: [eleDivideValue[0], eleDivideValue[1], eleDivideValue[2], eleDivideValue[3], eleDivideValue[4]],
+              type: 'bar',
+              color: "#9c9a1b"
+          }]
+      };
+      eleValue.setOption(eMoney);
+      eleMoney.setOption(eValue);
+      waterValue.setOption(wMoney);
+      waterMoney.setOption(wValue);
+      $(".graph").css("height","150px");
+    }
   }
 )

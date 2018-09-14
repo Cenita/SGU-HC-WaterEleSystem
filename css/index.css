@@ -53,17 +53,28 @@
 .topInformation
 {
   /* color: rgba(0, 0, 0,0.5); */
-  height: 25px;
+  font-size: 10px;
+  height: 10px;
   float: left;
+  position: relative;
   line-height: 25px;
   width: 50%;
   text-align: center;
 }
+.averageOfSixDay
+{
+  left: 60px;
+  top: 35px;
+}
+.averageOfThreeDay
+{
+  top:35px;
+  left: 25px;
+}
 .forecastEndDay
 {
-  color: rgba(0, 0, 0,0.5);
-  padding-top: 33px;
-  padding-left: 25px;
+  color: rgba(57, 57, 57, 0.8);
+  text-align: center;
 }
 #inPart
 {
@@ -109,6 +120,11 @@
 {
   text-align: center;
   margin-top: 5px;
+}
+.graph
+{
+  width:350px;
+  height:200px;
 }
 #metrePart .ICT
 {

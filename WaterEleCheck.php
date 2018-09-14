@@ -4,13 +4,13 @@
  $cookie_jar = "pic.cookie";
  header("content-Type: text/html; charset=Utf-8");
  session_start();
- $dokey=strval($_SESSION['key']);
- $getKey=strval($_GET["dokey"]);
- if($dokey!=$getKey||$dokey=="")
- {
-     echo "error";
-     return;
- }
+// $dokey=strval($_SESSION['key']);
+// $getKey=strval($_GET["dokey"]);
+// if($dokey!=$getKey||$dokey=="")
+// {
+//     echo "error";
+//     return;
+// }
  //爬虫
  $roomMate=$_GET["roomId"];
  $buildingId=$_GET["buildingId"];
@@ -41,11 +41,12 @@
  $eleRecord[6]=0.0;
  $eleDate[6]=0;
  $topUpRecord=array("money"=>array(6),"type"=>array(6),"date"=>array(6));
+ $thisYear=strval(date("Y"))."-";
  foreach ($waterEleHtml->find("#usedWaterDiv .tableBody .even") as $usedEle)
  {
     $temp=$usedEle->find("td");
     $waterRecord[$intI]=$temp[5]->plaintext;
-    $waterDate[$intI]=explode(" ",strval($temp[6]->plaintext))[2];
+    $waterDate[$intI]=explode($thisYear,explode(" ",strval($temp[6]->plaintext))[2])[1];
     $intI++;
  }
  $intI=0;
@@ -53,7 +54,7 @@
  {
      $temp=$usedEle->find("td");
      $eleRecord[$intI]=$temp[5]->plaintext;
-     $eleDate[$intI]=explode(" ",strval($temp[6]->plaintext))[2];
+     $eleDate[$intI]=explode($thisYear,explode(" ",strval($temp[6]->plaintext))[2])[1];
      $intI++;
  }
  $intI=0;
@@ -62,7 +63,7 @@
      $temp=$usedEle->find("td");
      $topUpRecord["money"][$intI]=$temp[1]->plaintext;
      $topUpRecord["type"][$intI]=$temp[3]->plaintext;
-     $topUpRecord["date"][$intI]=explode(" ",strval($temp[6]->plaintext))[2];;
+     $topUpRecord["date"][$intI]=explode($thisYear,explode(" ",strval($temp[6]->plaintext))[2])[1];
      $intI++;
  }
 

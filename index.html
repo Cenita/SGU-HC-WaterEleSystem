@@ -1,8 +1,8 @@
 ﻿<!DOCTYPE html>
 <?php
-    session_start();
-    $sendKey=md5(time());
-    $_SESSION['key']=$sendKey;
+    // session_start();
+    // $sendKey=md5(time());
+    // $_SESSION['key']=$sendKey;
 ?>
 <html lang="en">
 <head>
@@ -12,6 +12,7 @@
   <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.min.js"></script>
   <script src="https://cdn.bootcss.com/semantic-ui/2.3.1/semantic.min.js"></script>
+  <script src="https://cdn.bootcss.com/echarts/4.1.0.rc2/echarts.js"></script>
   <link href="https://cdn.bootcss.com/semantic-ui/2.3.1/semantic.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/index.css">
   <script type="text/javascript" src="js/index.js"></script>
@@ -110,46 +111,42 @@
             <span class="content">{{ eleRecord }}元</span>
           </div>
         </div>
-        <h4 class="ui horizontal divider header">水费统计表</h4>
+        <h4 class="ui horizontal divider header">水费</h4>
         <div id="sixDayWaterPart">
-          <div class="averageOfSixDay topInformation">
-            <span class="title">六日平均：</span>
-            <span class="content">{{averWaterOfSix}}元</span>
-          </div>
-          <div class="averageOfThreeDay topInformation">
-            <span class="title">三日平均：</span>
-            <span class="content">{{averWaterOfThree}}元</span>
-          </div>
           <div class="forecastEndDay">
             <span class="title">预测停水日期：</span>
             <span class="content">{{waterEndData}}</span>
           </div>
-          <div class="ui middle aligned list weList">
-            <div class="item">
-              <div>具体余额</div>
-              <div>日期</div>
+          <div class="graphPart" style="position:relative;top:-20px">
+            <div class="averageOfSixDay topInformation">
+              <span class="title">六日平均：</span>
+              <span class="content">{{averWaterOfSix}}元</span>
             </div>
+            <div class="averageOfThreeDay topInformation">
+              <span class="title">三日平均：</span>
+              <span class="content">{{averWaterOfThree}}元</span>
+            </div>
+            <div id="waterGraph" class="graph"></div>
+            <div id="waterValueGraph" class="graph"></div>
           </div>
         </div>
-        <h4 class="ui horizontal divider header">电费统计表</h4>
+        <h4 class="ui horizontal divider header">电费</h4>
         <div id="sixDayElePart">
-          <div class="averageOfSixDay topInformation">
-            <span class="title">六日平均：</span>
-            <span class="content">{{averEleOfSix}}元</span>
-          </div>
-          <div class="averageOfThreeDay topInformation">
-            <span class="title">三日平均：</span>
-            <span class="content">{{averEleOfThree}}元</span>
-          </div>
           <div class="forecastEndDay">
             <span class="title">预测停电日期：</span>
             <span class="content">{{eleEndDate}}</span>
           </div>
-          <div class="ui middle aligned list weList">
-            <div class="item">
-              <div>具体余额</div>
-              <div>日期</div>
+          <div class="graphPart" style="position:relative;top:-20px">
+            <div class="averageOfSixDay topInformation">
+              <span class="title">六日平均：</span>
+              <span class="content">{{averEleOfSix}}元</span>
             </div>
+            <div class="averageOfThreeDay topInformation">
+              <span class="title">三日平均：</span>
+              <span class="content">{{averEleOfThree}}元</span>
+            </div>
+            <div id="eleGraph" class="graph"></div>
+            <div id="eleValueGraph" class="graph"></div>
           </div>
         </div>
         <h4 class="ui horizontal divider header">充值记录表</h4>
@@ -178,5 +175,6 @@
       MADE BY CHENHUITAO
     </div>
   </div>
+
 </body>
 </html>
