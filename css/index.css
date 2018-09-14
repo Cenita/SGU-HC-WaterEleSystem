@@ -1,0 +1,128 @@
+.horizontal
+{
+  padding-bottom: 10px!important;
+}
+.mainPart
+{
+  width: 350px;
+  margin: auto;
+  padding-top:5px;
+  min-height: 500px;
+}
+.mainPart .checkPart .bigTitle
+{
+  font-size: 30px;
+  text-align: center;
+}
+.mainPart .checkPart >*
+{
+  line-height: 50px;
+  margin-top: 20px;
+  height: 50px;
+}
+.mainPart .error
+{
+  border: 1px solid rgba(255, 74, 74,0.8)!important;
+}
+.mainPart .checkPart input,.mainPart .checkPart .selection
+{
+  width: 250px;
+}
+.mainPart .checkPart .title
+{
+
+  float: left;
+  display: block;
+  width: 100px;
+}
+#send
+{
+  line-height: 100%;
+  width: 100%;
+}
+
+.mainPart .getPart
+{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.mainPart #getBasicInformation
+{
+  height: 25px;
+}
+.topInformation
+{
+  /* color: rgba(0, 0, 0,0.5); */
+  height: 25px;
+  float: left;
+  line-height: 25px;
+  width: 50%;
+  text-align: center;
+}
+.forecastEndDay
+{
+  color: rgba(0, 0, 0,0.5);
+  padding-top: 33px;
+  padding-left: 25px;
+}
+#inPart
+{
+  padding-top: 25px;
+}
+.item
+{
+  color: rgba(0, 0, 0,0.6);
+  height: 40px;
+  line-height:40px;
+  padding-top: 0px!important;
+}
+.list .item:first-child
+{
+  color: rgb(0, 0, 0)!important;
+}
+.list
+{
+  margin-bottom: 50px!important;
+}
+.item div
+{
+
+  text-align: center;
+  float: left;
+  line-height: 40px;
+}
+.weList .item div
+{
+  width: 50%;
+}
+#TopUpPart .item div
+{
+  width: 33%;
+}
+#metrePart
+{
+  margin: auto;
+  width: 400px;
+  margin-bottom: 30px;
+}
+#metrePart >*
+{
+  text-align: center;
+  margin-top: 5px;
+}
+#metrePart .ICT
+{
+  color: rgb(157, 157, 157);
+}
+.inCheck
+{
+  cursor: default!important;
+  background: rgb(113, 113, 113)!important;
+}
+.tips
+{
+  font-size: 10px;
+  width: 100%;
+  text-align: center;
+  color:rgb(151, 151, 151);
+}

@@ -1,0 +1,120 @@
+$(
+  function()
+  {
+    $(".getPart").show();
+    var sendStyle=new Vue({
+    el:".mainPart",
+    data:{
+      sendPost:false,
+      loading:false,
+      roomId:"",
+      buildingId:"",
+      partSeen:false,
+      waterRecord:"156.8",
+      eleRecord:"20.6",
+      averWaterOfSix:"52",
+      averWaterOfThree:"50",
+      waterEndData:"2018-6-65",
+      averEleOfSix:"165",
+      averEleOfThree:"15",
+      eleEndDate:"2018-3-25",
+      judgeExist:false
+    }})
+    $('.ui.dropdown').dropdown();
+    $("#roomIdButton").change(
+      function()
+      {
+        $(this).removeClass("error");
+      }
+    )
+    $("#buildingId").change(
+      function()
+      {
+        $(this).parents(".error").removeClass("error");
+      }
+    )
+    $("#send").click(
+      function()
+      {
+        if($(this).hasClass("inCheck"))
+        {return;}
+        var errorReturn=false;
+        $(this).addClass("inCheck");
+        $(".error").removeClass("error");
+        if(sendStyle.roomId=="")
+        {
+          $("#roomIdButton").addClass("error");
+          errorReturn=true;
+        }
+        if(sendStyle.buildingId=="")
+        {
+          $(".selection").addClass("error");
+          errorReturn=true;
+        }
+        if(errorReturn)
+        {
+          $(".inCheck").removeClass("inCheck");
+          return ;
+        }
+        var userkey=$(".madeBy").attr("key");
+        sendStyle.partSeen=true;
+        sendStyle.sendPost=false;
+        sendStyle.loading=true;
+        sendStyle.judgeExist=false;
+        $.ajax({
+          type:'GET',
+          url:'WaterEleCheck.php',
+          dataType : "json",
+          data:{
+            roomId:sendStyle.roomId,
+            buildingId:sendStyle.buildingId,
+            dokey:userkey
+          },
+          success:function(re)
+          {
+            $(".inCheck").removeClass("inCheck");
+            $(".eleItem").remove();
+            if(re.isExist=="no")
+            {
+              sendStyle.loading=false;
+              sendStyle.judgeExist=true;
+              return;
+            }
+            else {
+              sendStyle.sendPost=true;
+              sendStyle.loading=false;
+            }
+            //水
+            sendStyle.waterRecord=re.waterRecord.now;
+            sendStyle.averWaterOfThree=re.waterRecord.userAverageOfDayOfThree;
+            sendStyle.averWaterOfSix=re.waterRecord.userAverageOfDayOfSix;
+            sendStyle.waterEndData=re.waterRecord.userEndDate;
+            //电
+            sendStyle.eleRecord=re.eleRecord.now;
+            sendStyle.averEleOfSix=re.eleRecord.userAverageOfDayOfSix;
+            sendStyle.averEleOfThree=re.eleRecord.userAverageOfDayOfThree;
+            sendStyle.eleEndDate=re.eleRecord.userEndDate;
+            //列表
+            for(var i=0;i<6;i++)
+            {
+              //v-else="sendPost"
+              $("#sixDayWaterPart .weList").append("<div class=\"item eleItem\"><div>"+re.waterRecord.history.left[i]+"</div><div>"+re.waterRecord.history.date[i]+"</div></div>");
+              $("#sixDayElePart .weList").append("<div class=\"item eleItem\"><div>"+re.eleRecord.history.left[i]+"</div><div>"+re.eleRecord.history.date[i]+"</div></div>");
+              $("#TopUpPart .list").append("<div class=\"item eleItem\"><div>"+re.topUpRecord.money[i]+"</div><div>"+re.topUpRecord.type[i]+"</div><div>"+re.topUpRecord.date[i]+"</div></div>");
+            }
+          },
+          error:function(re)
+          {
+            //alert("查询失败");
+            //sendStyle.partSeen=false;
+            $(".inCheck").removeClass("inCheck");
+            alert("发生错误");
+            sendStyle.sendPost=false;
+            sendStyle.loading=false;
+            console.log("查询失败");
+          }
+        })
+      }
+    )
+  }
+)
