@@ -4,16 +4,18 @@
  $cookie_jar = "pic.cookie";
  header("content-Type: text/html; charset=Utf-8");
  session_start();
-// $dokey=strval($_SESSION['key']);
-// $getKey=strval($_GET["dokey"]);
-// if($dokey!=$getKey||$dokey=="")
-// {
-//     echo "error";
-//     return;
-// }
+ $dokey=strval($_SESSION['key']);
+ $getKey=strval($_GET["dokey"]);
+ if($dokey!=$getKey||$dokey=="")
+ {
+     echo "error";
+     return;
+ }
  //爬虫
  $roomMate=$_GET["roomId"];
  $buildingId=$_GET["buildingId"];
+ $_SESSION["roomId"]=$roomMate;
+ $_SESSION["buildingId"]=$buildingId;
  $addressHtml="http://210.38.192.120:8080/sdms-select/webSelect/roomFillLogView1.do?roomName=".$roomMate."&buildingId=".$buildingId;
  $loginHtml="http://210.38.192.120:8080/sdms-select/webSelect/welcome2.jsp";
  $ch = curl_init();
@@ -93,7 +95,6 @@
          $eleCount++;
          $temp2+=$addEle;
      }
-
  }
  $waterAverageOfThree=round($temp1/$WaterCount,3);
  $eleAverageOfThree=round($temp2/$eleCount,3);
