@@ -181,7 +181,7 @@ $(
       wValue = {
           xAxis: {
               type: 'category',
-              data: [waterDataDate[0], waterDataDate[1], waterDataDate[2],waterDataDate[3],waterDataDate[4]]
+              data: [waterDataDate[1], waterDataDate[2], waterDataDate[3],waterDataDate[4],waterDataDate[5]]
           },
           yAxis: {
               name: "日用",
@@ -214,7 +214,7 @@ $(
             yAxis: {
                 type: 'value',
                 name: "余额",
-                min:Math.floor(minWaterValue/10)*10
+                min:Math.floor(minWaterValue-2*waterAverage)
             },
             tooltip:{
               trigger:'axis'
@@ -230,7 +230,7 @@ $(
       eValue = {
           xAxis: {
               type: 'category',
-              data: [waterDataDate[0], waterDataDate[1], waterDataDate[2],waterDataDate[3],waterDataDate[4]]
+              data: [waterDataDate[1], waterDataDate[2], waterDataDate[3],waterDataDate[4],waterDataDate[5]]
           },
           yAxis: {
               name: "日用",
@@ -263,7 +263,7 @@ $(
             yAxis: {
                 type: 'value',
                 name: "余额",
-                min:Math.floor(minEleValue/10)*10
+                min:Math.floor(minEleValue-2*eleAverage)
             },
             tooltip:{
               trigger:'axis'
