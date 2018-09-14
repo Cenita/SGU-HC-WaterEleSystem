@@ -14,6 +14,7 @@
   <script src="https://cdn.bootcss.com/semantic-ui/2.3.1/semantic.min.js"></script>
   <script src="https://cdn.bootcss.com/echarts/4.1.0.rc2/echarts.js"></script>
   <link href="https://cdn.bootcss.com/semantic-ui/2.3.1/semantic.min.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/index.css">
   <script type="text/javascript" src="js/index.js"></script>
   <title>韶关学院水电费查询</title>
@@ -100,18 +101,20 @@
       <div class="ui loading segment" v-show="loading"   style="height:300px;z-index:-20;">
       </div>
       <div class="ui raised segment" v-show="sendPost" id="inPart" >
-        <h4 class="ui horizontal divider header">电水费</h4>
+        <h4 class="ui horizontal divider header">{{roomName}}</h4>
         <div id="getBasicInformation">
-          <div class="getWaterPart topInformation">
+          <div class="getWaterPart topInformation" style="font-size:15px">
             <span class="title">水费：</span>
             <span class="content">{{ waterRecord }}元</span>
           </div>
-          <div class="getElePart topInformation">
+          <div class="getElePart topInformation" style="font-size:15px">
             <span class="title">电费：</span>
             <span class="content">{{ eleRecord }}元</span>
           </div>
         </div>
-        <h4 class="ui horizontal divider header">水费</h4>
+        <h4 class="ui horizontal divider header" style="color:#167fd4">
+          <i class="fa fa-tint"></i>
+        </h4>
         <div id="sixDayWaterPart">
           <div class="forecastEndDay">
             <span class="title">预测停水日期：</span>
@@ -130,7 +133,9 @@
             <div id="waterValueGraph" class="graph"></div>
           </div>
         </div>
-        <h4 class="ui horizontal divider header">电费</h4>
+        <h4 class="ui horizontal divider header" style="color:#FF9900">
+          <i class="fa fa-flash"></i>
+        </h4>
         <div id="sixDayElePart">
           <div class="forecastEndDay">
             <span class="title">预测停电日期：</span>

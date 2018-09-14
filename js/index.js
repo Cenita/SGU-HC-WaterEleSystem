@@ -18,6 +18,7 @@ $(
       averEleOfSix:"165",
       averEleOfThree:"15",
       eleEndDate:"2018-3-25",
+      roomName:"错误",
       judgeExist:false
     }})
     $('.ui.dropdown').dropdown();
@@ -84,6 +85,7 @@ $(
               sendStyle.sendPost=true;
               sendStyle.loading=false;
             }
+            sendStyle.roomName=re.roomName+"的水电费";
             //水
             sendStyle.waterRecord=re.waterRecord.now;
             sendStyle.averWaterOfThree=re.waterRecord.userAverageOfDayOfThree;

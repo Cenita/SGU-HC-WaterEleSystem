@@ -40,11 +40,13 @@
  $waterDate[6]=0;
  $eleRecord[6]=0.0;
  $eleDate[6]=0;
+ $roomName="";
  $topUpRecord=array("money"=>array(6),"type"=>array(6),"date"=>array(6));
  $thisYear=strval(date("Y"))."-";
  foreach ($waterEleHtml->find("#usedWaterDiv .tableBody .even") as $usedEle)
  {
     $temp=$usedEle->find("td");
+    $roomName=$temp[0]->plaintext;
     $waterRecord[$intI]=$temp[5]->plaintext;
     $waterDate[$intI]=explode($thisYear,explode(" ",strval($temp[6]->plaintext))[2])[1];
     $intI++;
@@ -133,7 +135,7 @@
  }
  if($eleAverageOfThree<=0)
      $eleEndDate="null";
- $totalSave= array("waterRecord"=>array(
+ $totalSave= array("roomName"=>$roomName,"waterRecord"=>array(
      "now"=>$waterRecord[0],
      "userAverageOfDayOfThree"=>$waterAverageOfThree,
      "userAverageOfDayOfSix"=>$waterAverageOfSix,
