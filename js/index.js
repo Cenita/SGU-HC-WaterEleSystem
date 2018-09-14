@@ -150,7 +150,7 @@ $(
             }
             else if(re.waterRecord.leftDay>=30)
             {
-              aiText="水还能用很久！我们来打水仗吧！";
+              aiText="水还能用很久！毫不慌张！";
             }
             sendStyle.waterHint=aiText;
             for(var i=0;i<6;i++)
