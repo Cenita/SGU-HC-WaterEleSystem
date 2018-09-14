@@ -263,7 +263,7 @@ $(
             yAxis: {
                 type: 'value',
                 name: "余额",
-                min:Math.floor(minWaterValue/10)*10
+                min:Math.floor(minEleValue/10)*10
             },
             tooltip:{
               trigger:'axis'
