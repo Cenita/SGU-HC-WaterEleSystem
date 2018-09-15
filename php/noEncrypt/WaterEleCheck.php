@@ -1,5 +1,5 @@
 ﻿<?php
- include ("js/simpleHtmlDom/simple_html_dom.php");
+ include ("../../js/simpleHtmlDom/simple_html_dom.php");
  error_reporting(E_ALL^E_NOTICE^E_WARNING);
  $cookie_jar = "pic.cookie";
  header("content-Type: text/html; charset=Utf-8");
