@@ -4,7 +4,7 @@
      session_start();
      $sendKey=md5(time());
      $page=$_GET["page"];
-     if($page=="") header("location:?page=index");
+     if($page==""||($page!="index"&&$_SESSION["isExist"]!="yes")) header("location:?page=index");
      $_SESSION['key']=$sendKey;
 ?>
 <html lang="en">

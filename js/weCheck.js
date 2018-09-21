@@ -81,7 +81,7 @@ $(
             $(".eleItem").remove();
             if(re.isExist=="no")
             {
-              $(".canSelect").removeClass("canSele");
+              $(".canSele").removeClass("canSele");
               sendStyle.loading=false;
               sendStyle.judgeExist=true;
               return;
@@ -162,7 +162,7 @@ $(
           {
             //alert("查询失败");
             //sendStyle.partSeen=false;
-            $(".canSelect").removeClass("canSelect");
+            $(".canSele").removeClass("canSele");
             initionGraph(re);
             $(".inCheck").removeClass("inCheck");
             alert("发生错误");
@@ -173,7 +173,7 @@ $(
         })
       }
     )
-    $(".canSelect").click(
+    $(".canSele").click(
       function()
       {
         console.log("asf");
