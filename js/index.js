@@ -207,7 +207,7 @@ $(
               waterDivideValue[i]=0;
             }
             else {
-              waterDivideValue[i]=waterAverage;
+              waterDivideValue[i]=waterAverage.toFixed(2);
             }
           }
           else {
@@ -222,7 +222,7 @@ $(
               eleDivideValue[i]=0;
             }
             else {
-              eleDivideValue[i]=eleAverage;
+              eleDivideValue[i]=eleAverage.toFixed(2);
             }
           }
           else {
@@ -233,8 +233,8 @@ $(
         }
         j--;
       }
-      waterDivideValue[0]=waterDivideValue[0]==0?waterAverage:waterDivideValue[0];
-      eleDivideValue[0]=eleDivideValue[0]==0?eleAverage:eleDivideValue[0];
+      waterDivideValue[0]=waterDivideValue[0]==0?waterAverage.toFixed(2):waterDivideValue[0];
+      eleDivideValue[0]=eleDivideValue[0]==0?eleAverage.toFixed(2):eleDivideValue[0];
       wValue = {
           xAxis: {
               type: 'category',
