@@ -121,9 +121,9 @@
  $waterCanUseDayNum=1;
  $eleCanUseDayNum=1;
  if($waterAverageOfThree>0)
- $waterCanUseDayNum=(int)($waterRecord[0]/$waterAverageOfThree);
+ $waterCanUseDayNum=(int)($waterRecord[0]/$waterAverageOfSix);
  if($eleAverageOfThree>0)
- $eleCanUseDayNum=(int)($eleRecord[0]/$eleAverageOfThree);
+ $eleCanUseDayNum=(int)($eleRecord[0]/$eleAverageOfSix);
  $waterEndDate=date("Y:m:d",strtotime("+".$waterCanUseDayNum." day"));
  $eleEndDate=date("Y:m:d",strtotime("+".$eleCanUseDayNum." day"));
  if($waterAverageOfThree<=0)
