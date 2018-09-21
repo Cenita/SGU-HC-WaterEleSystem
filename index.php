@@ -16,7 +16,6 @@
   <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.min.js"></script>
   <script src="https://cdn.bootcss.com/semantic-ui/2.3.1/semantic.min.js"></script>
   <script type="text/javascript" src="js/wecheck.js"></script>
-  <script src=""></script>
   <script type="text/javascript">
       (function() {
        var s = document.createElement('script');
@@ -32,7 +31,7 @@
     })();
   </script>
   <script src="js/nav.js"></script>
-  <link href="js/Semantic/semantic.css"  rel="stylesheet">
+  <link href="https://cdn.bootcss.com/semantic-ui/2.3.1/semantic.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/index.css">
   <title>韶关学院水电费查询</title>
 </head>
