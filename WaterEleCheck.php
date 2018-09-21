@@ -75,6 +75,7 @@
  {
      $isExist="no";
  }
+ $_SESSION["isExist"]=$isExist;
  //计算日均使用量
  $temp1=0;
  $temp2=0;

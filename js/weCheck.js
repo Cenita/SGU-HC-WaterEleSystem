@@ -1,6 +1,7 @@
 $(
   function()
   {
+
     $(".getPart").show();
     var sendStyle=new Vue({
     el:".mainPart",
@@ -76,9 +77,11 @@ $(
           success:function(re)
           {
             $(".inCheck").removeClass("inCheck");
+            $(".outPage").addClass("canSele");
             $(".eleItem").remove();
             if(re.isExist=="no")
             {
+              $(".canSelect").removeClass("canSele");
               sendStyle.loading=false;
               sendStyle.judgeExist=true;
               return;
@@ -153,16 +156,13 @@ $(
               aiText="水还能用很久！毫不慌张！";
             }
             sendStyle.waterHint=aiText;
-            for(var i=0;i<6;i++)
-            {
-              //v-else="sendPost"
-              $("#TopUpPart .list").append("<div class=\"item eleItem\"><div>"+re.topUpRecord.money[i]+"</div><div>"+re.topUpRecord.type[i]+"</div><div>"+re.topUpRecord.date[i]+"</div></div>");
-            }
+
           },
           error:function(re)
           {
             //alert("查询失败");
             //sendStyle.partSeen=false;
+            $(".canSelect").removeClass("canSelect");
             initionGraph(re);
             $(".inCheck").removeClass("inCheck");
             alert("发生错误");
@@ -171,6 +171,12 @@ $(
             console.log("查询失败");
           }
         })
+      }
+    )
+    $(".canSelect").click(
+      function()
+      {
+        console.log("asf");
       }
     )
     function initionGraph(data)
