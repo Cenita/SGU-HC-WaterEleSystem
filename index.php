@@ -83,7 +83,7 @@
             <img src="img/logo2.png" id="logo2" style="display: none;width: 30px;height: 50px;position:relative;left: -30px;top:-5px;" alt="">
             <img src="img/logo.png"  id="logoImg" alt="环创电脑工作室" style="width:60px;margin:auto;">
             <img src="img/lgoo.png" id="logoEnd" style="display: none;opacity: 0;height: 50px;widh: auto;" alt="">
-            <div id="mask" style="display: none;position: relative; top: -49px; background-color: rgb(255,255,255);z-index: 1002;height:50px;left: 120px;opacity:1; -moz-opacity:0.5;"></div>
+            <div id="mask" style="display: none;position: relative; top: -60px; background-color: rgb(255,255,255);z-index: 1002;height:60px;left: 120px;opacity:1; -moz-opacity:0.5;"></div>
         </div>
 
     </div>
