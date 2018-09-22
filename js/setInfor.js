@@ -38,7 +38,6 @@ $(
           $(".bigTitle span").text("韶关学院水电查询");
           $(".inCheck").removeClass("inCheck");
           $(".canSele").removeClass("canSele");
-          $("#roomIdButton").val("");
           $(".roomPart .input").show();
           $("#roomBandTitle").hide();
           $(".buildingPart .dropdown").show();

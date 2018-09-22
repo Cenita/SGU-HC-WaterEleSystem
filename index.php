@@ -44,7 +44,7 @@
       </div>
       <div class="selectPart">
           <span class="indexButton <?php if($page=="index"){echo "inPage";}else{echo "outPage";if($_SESSION["isExist"]=="yes")echo " canSele";}?>" a1="index">水电查询</span>
-          <span class="timeButton <?php if($page=="time"){echo "inPage";}else{echo "outPage";if($_SESSION["isExist"]=="yes")echo " canSele";}?>" a1="time">时间查询</span>
+          <span class="timeButton <?php if($page=="time"){echo "inPage";}else{echo "outPage";if($_SESSION["isExist"]=="yes")echo " canSele";}?>" a1="time">定向查询</span>
           <span class="topupButton <?php if($page=="charge"){echo "inPage";}else{echo "outPage";if($_SESSION["isExist"]=="yes")echo " canSele";}?>" a1="charge">充值记录</span>
           <span class="setButton <?php if($page=="set"){echo "inPage";}else{echo "outPage";if($_SESSION["isExist"]=="yes")echo " canSele";}?>" a1="set">设置</span>
       </div>
