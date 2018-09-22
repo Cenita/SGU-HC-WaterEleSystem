@@ -91,7 +91,7 @@ $(
               sendStyle.sendPost=true;
               sendStyle.loading=false;
             }
-            $(".bigTitle span").text(re.roomName+"的水电");
+            $(".bigTitle span").text(re.roomName+"的水电费");
             sendStyle.roomName=re.roomName+"的水电费";
             //水
             sendStyle.waterRecord=re.waterRecord.now;

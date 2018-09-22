@@ -76,7 +76,7 @@
     <div class="ICT">
         <img src="img/logo.png" alt="环创电脑工作室" style="width:60px;margin:auto;">
     </div>
-    <div class="madeBy" style="display: none" key="<?php echo $sendKey?>">
+    <div class="madeBy" style="display: none" key="<?php echo $sendKey?>" autoCheck="<?php echo $_SESSION["isExist"]; ?>">
       MADE BY CHENHUITAO陈慧涛
     </div>
   </div>

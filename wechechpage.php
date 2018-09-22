@@ -1,4 +1,13 @@
-
+<script>
+    $(
+        function () {
+            if($(".madeBy").attr("autoCheck")=="yes")
+            {
+                $("#send").click();
+            }
+        }
+    )
+</script>
 <div class="roomPart">
   <span class="title">房间号：</span>
   <div class="ui input">
