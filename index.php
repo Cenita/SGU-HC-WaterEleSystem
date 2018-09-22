@@ -4,6 +4,9 @@
      session_start();
      $sendKey=md5(md5(time()+"asfasf"));
      $page=$_GET["page"];
+     $isFromWechat=$_SESSION["from"];
+     if($isFromWechat!="weChat")
+       header("location:error.html");
      if($page!="set"&&$_SESSION["isExist"]!="yes") header("location:?page=set");
      $_SESSION['key']=$sendKey;
 ?>

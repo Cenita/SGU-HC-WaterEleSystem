@@ -1,0 +1,27 @@
+.mainPart
+{
+  padding-top: 150px;
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  min-width: 300px;
+}
+#add
+{
+  font-weight: 800;
+  font-size: 20px;
+}
+#content
+{
+  font-size: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: rgb(181, 181, 181);
+}
+#cord,#gg
+{
+  width: 60%;
+  height: auto;
+  margin: auto;
+
+}
