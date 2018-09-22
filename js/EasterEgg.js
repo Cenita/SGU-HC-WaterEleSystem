@@ -44,6 +44,7 @@ $(
           $("#mask").show().delay(600).animate({left:"310px"},1000);
           $("#logoEnd").show().delay(600).animate({opacity:"1"});
           $(".logoPart").css("cursor","pointer");
+          $(".logoPart").css("height","50px");
         }
       }
     )
