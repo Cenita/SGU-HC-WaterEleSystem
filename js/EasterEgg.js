@@ -41,7 +41,7 @@ $(
           $("#logo2").rotate(180);
           $("#logo1").animate({left:"55px",width:"40px",top:"-4px",left:"47px"}).rotate({animateTo:61});
           $("#logo2").animate({opacity:"1",top:"-5px",left:"-25px",width:"32px",height:"41px"});
-          $("#mask").show().delay(600).animate({left:"310px"},1000).delay(1600).hide();
+          $("#mask").show().delay(600).animate({left:"310px",width:"0px"},1000);
           $("#logoEnd").show().delay(600).animate({opacity:"1"});
           $(".logoPart").css("cursor","pointer");
           $(".logoPart").css("height","50px");
