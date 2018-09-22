@@ -16,6 +16,8 @@
   <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.min.js"></script>
   <script src="https://cdn.bootcss.com/semantic-ui/2.3.1/semantic.min.js"></script>
   <script type="text/javascript" src="js/wecheck.js"></script>
+  <script type="text/javascript" src="js/jquery.rotate.min.js"></script>
+  <script type="text/javascript" src="js/EasterEgg.js"></script>
   <script type="text/javascript">
       (function() {
        var s = document.createElement('script');
@@ -76,7 +78,7 @@
   </div>
   <div id="metrePart">
     <div class="ICT">
-        <img src="img/logo.png" alt="环创电脑工作室" style="width:60px;margin:auto;">
+        <img src="img/logo.png" class="logoImg" alt="环创电脑工作室" style="width:60px;margin:auto;">
     </div>
     <div class="madeBy" style="display: none" dokey="<?php echo $_SESSION['key']?>" autoCheck="<?php echo $_SESSION["isExist"]; ?>" roomId="<?php echo $_SESSION["roomId"]?>" buildingId="<?php echo $_SESSION["buildingId"]?>">
       MADE BY CHENHUITAO(陈慧涛)
