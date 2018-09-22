@@ -1,15 +1,14 @@
 $(
   function()
   {
-
     $(".getPart").show();
     var sendStyle=new Vue({
     el:".mainPart",
     data:{
       sendPost:false,
       loading:false,
-      roomId:$(".roomPart input").attr("data"),
-      buildingId:$(".buildingPart .dropdown").attr("data"),
+      roomId:$(".madeBy").attr("roomId"),
+      buildingId:$(".madeBy").attr("buildingId"),
       partSeen:false,
       waterRecord:"156.8",
       eleRecord:"20.6",
@@ -24,7 +23,7 @@ $(
       waterHint:"你好呀",
       eleHint:"你好哦"
     }})
-    $('.ui.dropdown').dropdown();
+    $('.ui.dropdown').dropdown("set value 6849");
     $("#roomIdButton").change(
       function()
       {
@@ -40,27 +39,7 @@ $(
     $("#send").click(
       function()
       {
-        if($(this).hasClass("inCheck"))
-        {return;}
-        var errorReturn=false;
-        $(this).addClass("inCheck");
-        $(".error").removeClass("error");
-        if(sendStyle.roomId=="")
-        {
-          $("#roomIdButton").addClass("error");
-          errorReturn=true;
-        }
-        if(sendStyle.buildingId=="")
-        {
-          $(".selection").addClass("error");
-          errorReturn=true;
-        }
-        if(errorReturn)
-        {
-          $(".inCheck").removeClass("inCheck");
-          return ;
-        }
-        var userkey=$(".madeBy").attr("key");
+        var userkey=$(".madeBy").attr("dokey");
         sendStyle.partSeen=true;
         sendStyle.sendPost=false;
         sendStyle.loading=true;
