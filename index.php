@@ -78,15 +78,15 @@
   </div>
   <div id="metrePart">
     <div class="ICT">
-        <div class="logoPart">
+        <div class="logoPart" style="<?php if($page=="index"||$page=="time") echo "display:none"?>">
             <img src="img/logo1.png" id="logo1"style="display: none;width: 60px;height: auto;position:relative;left: 18px;" alt="">
             <img src="img/logo2.png" id="logo2" style="display: none;width: 30px;height: 50px;position:relative;left: -30px;top:-5px;" alt="">
             <img src="img/logo.png"  id="logoImg" alt="环创电脑工作室" style="width:60px;margin:auto;">
             <img src="img/lgoo.png" id="logoEnd" style="display: none;opacity: 0;height: 50px;widh: auto;" alt="">
             <div id="mask" style="display: none;position: relative; top: -60px; background-color: rgb(255,255,255);z-index: 1002;height:60px;left: 120px;opacity:1; -moz-opacity:0.5;"></div>
         </div>
-
     </div>
+
     <div class="madeBy" style="display: none" dokey="<?php echo $_SESSION['key']?>" autoCheck="<?php echo $_SESSION["isExist"]; ?>" roomId="<?php echo $_SESSION["roomId"]?>" buildingId="<?php echo $_SESSION["buildingId"]?>">
       MADE BY CHENHUITAO(陈慧涛)
     </div>
