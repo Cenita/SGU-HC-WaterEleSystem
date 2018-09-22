@@ -29,14 +29,11 @@
        s.src = 'https://cdn.bootcss.com/echarts/4.1.0.rc2/echarts.js';
        var x = document.getElementsByTagName('script')[0];
        x.parentNode.insertBefore(s, x);
-       var link = $('<link />');
-        link.attr('href', '//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-        link.attr('rel', 'stylesheet');
-        link.appendTo($('head'));
     })();
   </script>
   <script type="text/javascript" src="js/setInfor.js"></script>
   <script src="js/nav.js"></script>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://cdn.bootcss.com/semantic-ui/2.3.1/semantic.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/index.css">
   <title><?php if($_SESSION["roomName"]=="")echo "韶关学院水电查询";else echo $_SESSION["roomName"]."的水电费"; ?></title>
