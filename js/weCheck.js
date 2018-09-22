@@ -84,12 +84,14 @@ $(
               $(".canSele").removeClass("canSele");
               sendStyle.loading=false;
               sendStyle.judgeExist=true;
+              $(".bigTitle span").text("韶关学院水电查询");
               return;
             }
             else {
               sendStyle.sendPost=true;
               sendStyle.loading=false;
             }
+            $(".bigTitle span").text(re.roomName+"的水电");
             sendStyle.roomName=re.roomName+"的水电费";
             //水
             sendStyle.waterRecord=re.waterRecord.now;
@@ -166,6 +168,7 @@ $(
             initionGraph(re);
             $(".inCheck").removeClass("inCheck");
             alert("发生错误");
+            $(".bigTitle span").text("韶关学院水电查询");
             sendStyle.sendPost=true;
             sendStyle.loading=false;
             console.log("查询失败");
@@ -218,6 +221,7 @@ $(
           }
           else {
             waterAverage+=waterDivideValue[i];
+            if(i!=0)
             waterAverage/=2;
             waterDivideValue[i]=waterDivideValue[i].toFixed(2);
           }
@@ -233,6 +237,7 @@ $(
           }
           else {
             eleAverage+=eleDivideValue[i];
+            if(i!=0)
             eleAverage/=2;
             eleDivideValue[i]=eleDivideValue[i].toFixed(2);
           }

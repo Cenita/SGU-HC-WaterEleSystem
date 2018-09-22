@@ -53,6 +53,7 @@
     $waterDate[$intI]=explode($thisYear,explode(" ",strval($temp[6]->plaintext))[2])[1];
     $intI++;
  }
+ $_SESSION["roomName"]=$roomName;
  $intI=0;
  foreach ($waterEleHtml->find("#usedEleDiv .tableBody .even") as $usedEle)
  {

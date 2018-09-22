@@ -1,6 +1,6 @@
 <script src="js\charge.js"></script>
 <div class="ui raised segment" style="height: 100%!important;">
-    <h4 class="ui horizontal divider header"><?php echo "丁香@G211";?>充值记录表</h4>
+    <h4 class="ui horizontal divider header"><?php echo $_SESSION["roomName"];?>充值记录表</h4>
     <div id="TopUpPart">
         <div class="ui middle aligned list">
             <div class="item">

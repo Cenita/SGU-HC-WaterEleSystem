@@ -33,14 +33,14 @@
   <script src="js/nav.js"></script>
   <link href="https://cdn.bootcss.com/semantic-ui/2.3.1/semantic.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/index.css">
-  <title>韶关学院水电费查询</title>
+  <title><?php if($_SESSION["roomName"]=="")echo "韶关学院水电查询";else echo $_SESSION["roomName"]."的水电费"; ?></title>
 </head>
 <body>
 
   <div class="mainPart">
     <div class="checkPart">
       <div class="bigTitle">
-        <span>韶关学院水电查询</span>
+        <span><?php if($_SESSION["roomName"]=="")echo "韶关学院水电查询";else echo $_SESSION["roomName"]."的水电费"; ?></span>
       </div>
       <div class="selectPart">
           <span class="indexButton <?php if($page=="index"){echo "inPage";}else{echo "outPage";if($_SESSION["isExist"]=="yes")echo " canSele";}?>" a1="index">水电查询</span>
@@ -57,12 +57,24 @@
               {
                 include "charge.php";
               }
+              else if($page=="time")
+              {
+                  include "timeFindDate.php";
+              }
+              else if($page=="set")
+              {
+
+              }
+              else
+              {
+                  header("location:?page=index");
+              }
 
             ?>
   </div>
   <div id="metrePart">
     <div class="ICT">
-        <img src="img/logo.png" alt="" style="width:60px;margin:auto;">
+        <img src="img/logo.png" alt="环创电脑工作室" style="width:60px;margin:auto;">
     </div>
     <div class="madeBy" style="display: none" key="<?php echo $sendKey?>">
       MADE BY CHENHUITAO陈慧涛
