@@ -18,7 +18,7 @@
   <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.min.js"></script>
   <script src="https://cdn.bootcss.com/semantic-ui/2.3.1/semantic.min.js"></script>
-  <script type="text/javascript" src="js/wecheck.js"></script>
+  <script type="text/javascript" src="js/weCheck.js"></script>
   <script type="text/javascript" src="js/jquery.rotate.min.js"></script>
   <script type="text/javascript" src="js/EasterEgg.js"></script>
   <script type="text/javascript">

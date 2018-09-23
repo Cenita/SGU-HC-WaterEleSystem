@@ -16,6 +16,8 @@
     $buildingId=$_GET["buildingId"];
     $_SESSION["roomId"]=$roomMate;
     $_SESSION["buildingId"]=$buildingId;
+	setcookie("roomId",$roomMate,time()+2592000);
+	setcookie("buildingId",$buildingId,time()+2592000);
     $addressHtml="http://210.38.192.120:8080/sdms-select/webSelect/roomFillLogView1.do?roomName=".$roomMate."&buildingId=".$buildingId;
     $loginHtml="http://210.38.192.120:8080/sdms-select/webSelect/welcome2.jsp";
     $ch = curl_init();
