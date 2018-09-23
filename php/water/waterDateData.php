@@ -29,7 +29,7 @@ $waterEleHtml->load($ret);
 $roomNumId=$waterEleHtml->find(".opear input")[0]->value;
 $beginDate=$_GET["beginDate"];
 $endDate=$_GET["endDate"];
-$postHtml="http://210.38.192.120:8080/sdms-select/webSelect/findUsedQuantityDelEleView.do?roomId=".$roomNumId."&beginTime=".$beginDate."&endTime=".$endDate;
+$postHtml="http://210.38.192.120:8080/sdms-select/webSelect/findUsedQuantityWaterView.do?roomId=".$roomNumId."&beginTime=".$beginDate."&endTime=".$endDate;
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $postHtml);
 curl_setopt($ch, CURLOPT_COOKIEFILE, $cookie_jar);
@@ -55,14 +55,14 @@ foreach ($waterEleHtml->find("#ec_table .tableBody tr") as $usedEle)
     $intI++;
 }
 $totalOut=array(
-    "eleNum"=>$eleNum,
+    "waterNum"=>$eleNum,
     "haveEleMoney"=>array($eleNum),
-    "eleDate"=>array($eleNum)
+    "waterDate"=>array($eleNum)
 );
 for($i=0;$i<$eleNum;$i++)
 {
     $totalOut["haveEleMoney"][$i]=$eleMoney[$i];
-    $totalOut["eleDate"][$i]=$eleDate[$i];
+    $totalOut["waterDate"][$i]=$eleDate[$i];
 }
 echo json_encode($totalOut);
 ?>

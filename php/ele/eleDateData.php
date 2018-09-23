@@ -1,8 +1,9 @@
 <?php
-    include ("js/simpleHtmlDom/simple_html_dom.php");
+    include ("../../js/simpleHtmlDom/simple_html_dom.php");
     $cookie_jar = "pic.cookie";
-    $roomMate=$_GET["roomId"];
-    $buildingId=$_GET["buildingId"];
+	session_start();
+	$roomMate=$_SESSION["roomId"];
+	$buildingId=$_SESSION["buildingId"];
     $addressHtml="http://210.38.192.120:8080/sdms-select/webSelect/roomFillLogView1.do?roomName=".$roomMate."&buildingId=".$buildingId;
     $loginHtml="http://210.38.192.120:8080/sdms-select/webSelect/findUsedQuantityDelEleView.do";
     $ch = curl_init();

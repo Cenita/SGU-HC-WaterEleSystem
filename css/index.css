@@ -2,6 +2,13 @@
 {
   max-height:20rem!important;
 }
+.declare
+{
+  position: relative;
+  top:-15px;
+  font-size: 10px!important;
+  color: rgb(180, 180, 180)!important;
+}
 .horizontal
 {
   padding-bottom: 10px!important;
@@ -186,4 +193,13 @@
 .hasBend
 {
   background-color: rgb(215, 98, 50)!important;
+}
+.ui.segment
+{
+	font-size:10px!important;
+}
+.ui.divider
+{
+	font-size:15px!important;
+	margin-bottom:0px!important;
 }

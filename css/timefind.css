@@ -1,0 +1,32 @@
+.findPart div
+{
+  float: left;
+  width: 47%;
+  text-align: center;
+}
+#eleTips,#waterTips
+{
+  color: rgb(180, 180, 180);
+  font-size: 12px;
+  text-align: center;
+}
+.fa-search
+{
+  color: rgb(96, 185, 219);
+  cursor: pointer;
+  transition: color 200ms;
+}
+.dateItem
+{
+  cursor: pointer;
+}
+.in-search
+{
+  cursor: default;
+  color: rgb(0, 0, 0)!important;
+}
+.declare
+{
+  font-size: 10px!important;
+  color: rgb(180, 180, 180)!important;
+}

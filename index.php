@@ -43,6 +43,7 @@
     <div class="checkPart">
       <div class="bigTitle">
         <span><?php if($_SESSION["roomName"]=="")echo "韶关学院水电查询";else echo $_SESSION["roomName"]."的水电费"; ?></span>
+        <div class="declare">© 环创电脑工作室</div>
       </div>
       <div class="selectPart">
           <span class="indexButton <?php if($page=="index"){echo "inPage";}else{echo "outPage";if($_SESSION["isExist"]=="yes")echo " canSele";}?>" a1="index">水电查询</span>

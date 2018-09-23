@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <!--meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=0')-->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="format-detection" content="adress=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>时间选择插件</title>
+    <style>
+      html{
+          background-color: #f2f3f7!important;
+      }
+      .kinerDatePickerInput {
+          width: 80%;
+          height: 100px;
+          background-color: #FFFFFF;
+          border: 1px solid orangered;
+          font-size: 24px;
+          padding-left: 30px;
+          border-radius: 15px;
+          margin: 100px auto;
+          display: block;
+          line-height: 100px;
+          color: #999999;
+      }
+      .btn{
+          width: 80%;
+          height: 100px;
+          line-height: 100px;
+          color: #FFFFFF;
+          background-color: orangered;
+          border-radius: 15px;
+          border: none;
+          outline: none;
+          margin: 30px auto;
+          font-size: 36px;
+          display: block;
+      }
+      
+      
+    </style>
+    <link rel="stylesheet" href="./css/index.css?rev=ac6ed5b7b7b35822066a7c1ff4367280">
+  </head>
+  <body class="app">
+    <div class="kinerDatePickerInput" id="kinerDatePickerInput1" title="请选择出生年月日" startYear="1950" default-val="1995-1-1">请选择出生年月日</div>
+    <button class="btn" id="btn1">获取</button>
+    <div class="kinerDatePickerInput" id="kinerDatePickerInput2" title="请选择出生年月日" startYear="1950" default-val="1995-1-1">请选择出生年月日</div>
+    <button class="btn" id="btn2">获取</button>
+    <div class="kinerDatePickerInput" id="kinerDatePickerInput3" title="请选择出生年月日" startYear="1950" default-val="1995-1-1">请选择出生年月日</div>
+    <button class="btn" id="btn3">获取</button>
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <script src="./js/libs/flexible.debug.js"></script>
+    <script src="./js/libs/flexible_css.debug.js"></script>
+    <script src="./js/libs/mobileFix.js"></script>
+    <script src="./js/libs/swiper.min.js"></script>
+    <script src="./js/libs/kinerDatePicker.js"></script>
+    <script>
+      $('#kinerDatePickerInput1').kinerDatePicker({
+          clickMaskHide: true,
+          showHandler: function (ctx) {
+              console.log("显示时间选择器:",ctx);
+          },
+          hideHandler: function (ctx) {
+              console.log("隐藏时间选择器:",ctx);
+          },
+          changeHandler: function (vals,ctx) {
+              console.log("时间改变:",vals,ctx);
+          },
+          okHandler: function (vals, ctx) {
+              console.log("确定选择:",vals,ctx);
+          },
+          cancelHandler: function (ctx) {
+              console.log("取消选择:",ctx);
+          }
+      });
+      
+      $('#btn1').click(function () {
+          console.log($('#kinerDatePickerInput1').kinerDatePickerVal());
+      });
+      $('#kinerDatePickerInput2').kinerDatePicker({
+          clickMaskHide: true,
+          showHandler: function (ctx) {
+              console.log("显示时间选择器:",ctx);
+          },
+          hideHandler: function (ctx) {
+              console.log("隐藏时间选择器:",ctx);
+          },
+          changeHandler: function (vals,ctx) {
+              console.log("时间改变:",vals,ctx);
+          },
+          okHandler: function (vals, ctx) {
+              console.log("确定选择:",vals,ctx);
+          },
+          cancelHandler: function (ctx) {
+              console.log("取消选择:",ctx);
+          }
+      });
+
+      $('#btn2').click(function () {
+          console.log($('#kinerDatePickerInput2').kinerDatePickerVal());
+      });
+      $('#kinerDatePickerInput3').kinerDatePicker({
+          clickMaskHide: true,
+          showHandler: function (ctx) {
+              console.log("显示时间选择器:",ctx);
+          },
+          hideHandler: function (ctx) {
+              console.log("隐藏时间选择器:",ctx);
+          },
+          changeHandler: function (vals,ctx) {
+              console.log("时间改变:",vals,ctx);
+          },
+          okHandler: function (vals, ctx) {
+              console.log("确定选择:",vals,ctx);
+          },
+          cancelHandler: function (ctx) {
+              console.log("取消选择:",ctx);
+          }
+      });
+
+      $('#btn3').click(function () {
+          console.log($('#kinerDatePickerInput3').kinerDatePickerVal());
+      });
+      
+      
+    </script>
+  </body>
+</html>
