@@ -76,12 +76,14 @@ $(
             sendStyle.waterRecord=re.waterRecord.now;
             sendStyle.averWaterOfThree=re.waterRecord.userAverageOfDayOfThree;
             sendStyle.averWaterOfSix=re.waterRecord.userAverageOfDayOfSix;
-            sendStyle.waterEndData=re.waterRecord.userEndDate;
+            var date=re.waterRecord.userEndDate.split(":");
+            sendStyle.waterEndData=date[0]+"年"+date[1]+"月"+date[2]+"日";
             //电
             sendStyle.eleRecord=re.eleRecord.now;
             sendStyle.averEleOfSix=re.eleRecord.userAverageOfDayOfSix;
             sendStyle.averEleOfThree=re.eleRecord.userAverageOfDayOfThree;
-            sendStyle.eleEndDate=re.eleRecord.userEndDate;
+            var date=re.eleRecord.userEndDate.split(":");
+            sendStyle.eleEndDate=date[0]+"年"+date[1]+"月"+date[2]+"日";
             //列表
             initionGraph(re);
             //小创ai
@@ -329,5 +331,7 @@ $(
       waterMoney.setOption(wValue);
       $(".graph").css("height","150px");
     }
+
+
   }
 )

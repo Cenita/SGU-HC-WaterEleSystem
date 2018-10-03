@@ -1,5 +1,5 @@
  /*
- * # Semantic UI - 2.3.3
+ * # Semantic UI - 2.3.1
  * https://github.com/Semantic-Org/Semantic-UI
  * http://www.semantic-ui.com/
  *
@@ -9,7 +9,7 @@
  *
  */
 /*!
- * # Semantic UI 2.3.3 - Reset
+ * # Semantic UI 2.3.1 - Reset
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -540,7 +540,7 @@ template {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Site
+ * # Semantic UI 2.3.1 - Site
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -759,7 +759,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Button
+ * # Semantic UI 2.3.1 - Button
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -4563,92 +4563,6 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
   margin-left: -1px;
 }
 
-/* Inverted */
-
-.ui.inverted.primary.buttons .button,
-.ui.inverted.primary.button {
-  background-color: transparent;
-  -webkit-box-shadow: 0px 0px 0px 2px #54C8FF inset !important;
-  box-shadow: 0px 0px 0px 2px #54C8FF inset !important;
-  color: #54C8FF;
-}
-
-.ui.inverted.primary.buttons .button:hover,
-.ui.inverted.primary.button:hover,
-.ui.inverted.primary.buttons .button:focus,
-.ui.inverted.primary.button:focus,
-.ui.inverted.primary.buttons .button.active,
-.ui.inverted.primary.button.active,
-.ui.inverted.primary.buttons .button:active,
-.ui.inverted.primary.button:active {
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-  color: #FFFFFF;
-}
-
-.ui.inverted.primary.buttons .button:hover,
-.ui.inverted.primary.button:hover {
-  background-color: #3ac0ff;
-}
-
-.ui.inverted.primary.buttons .button:focus,
-.ui.inverted.primary.button:focus {
-  background-color: #2bbbff;
-}
-
-.ui.inverted.primary.buttons .active.button,
-.ui.inverted.primary.active.button {
-  background-color: #3ac0ff;
-}
-
-.ui.inverted.primary.buttons .button:active,
-.ui.inverted.primary.button:active {
-  background-color: #21b8ff;
-}
-
-/* Inverted Basic */
-
-.ui.inverted.primary.basic.buttons .button,
-.ui.inverted.primary.buttons .basic.button,
-.ui.inverted.primary.basic.button {
-  background-color: transparent;
-  -webkit-box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
-  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
-  color: #FFFFFF !important;
-}
-
-.ui.inverted.primary.basic.buttons .button:hover,
-.ui.inverted.primary.buttons .basic.button:hover,
-.ui.inverted.primary.basic.button:hover {
-  -webkit-box-shadow: 0px 0px 0px 2px #3ac0ff inset !important;
-  box-shadow: 0px 0px 0px 2px #3ac0ff inset !important;
-  color: #54C8FF !important;
-}
-
-.ui.inverted.primary.basic.buttons .button:focus,
-.ui.inverted.primary.basic.buttons .button:focus,
-.ui.inverted.primary.basic.button:focus {
-  -webkit-box-shadow: 0px 0px 0px 2px #2bbbff inset !important;
-  box-shadow: 0px 0px 0px 2px #2bbbff inset !important;
-  color: #54C8FF !important;
-}
-
-.ui.inverted.primary.basic.buttons .active.button,
-.ui.inverted.primary.buttons .basic.active.button,
-.ui.inverted.primary.basic.active.button {
-  -webkit-box-shadow: 0px 0px 0px 2px #3ac0ff inset !important;
-  box-shadow: 0px 0px 0px 2px #3ac0ff inset !important;
-  color: #54C8FF !important;
-}
-
-.ui.inverted.primary.basic.buttons .button:active,
-.ui.inverted.primary.buttons .basic.button:active,
-.ui.inverted.primary.basic.button:active {
-  -webkit-box-shadow: 0px 0px 0px 2px #21b8ff inset !important;
-  box-shadow: 0px 0px 0px 2px #21b8ff inset !important;
-  color: #54C8FF !important;
-}
-
 /*-------------------
       Secondary
 --------------------*/
@@ -4740,92 +4654,6 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 
 .ui.buttons:not(.vertical) > .basic.primary.button:not(:first-child) {
   margin-left: -1px;
-}
-
-/* Inverted */
-
-.ui.inverted.secondary.buttons .button,
-.ui.inverted.secondary.button {
-  background-color: transparent;
-  -webkit-box-shadow: 0px 0px 0px 2px #545454 inset !important;
-  box-shadow: 0px 0px 0px 2px #545454 inset !important;
-  color: #545454;
-}
-
-.ui.inverted.secondary.buttons .button:hover,
-.ui.inverted.secondary.button:hover,
-.ui.inverted.secondary.buttons .button:focus,
-.ui.inverted.secondary.button:focus,
-.ui.inverted.secondary.buttons .button.active,
-.ui.inverted.secondary.button.active,
-.ui.inverted.secondary.buttons .button:active,
-.ui.inverted.secondary.button:active {
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-  color: #FFFFFF;
-}
-
-.ui.inverted.secondary.buttons .button:hover,
-.ui.inverted.secondary.button:hover {
-  background-color: #616161;
-}
-
-.ui.inverted.secondary.buttons .button:focus,
-.ui.inverted.secondary.button:focus {
-  background-color: #686868;
-}
-
-.ui.inverted.secondary.buttons .active.button,
-.ui.inverted.secondary.active.button {
-  background-color: #616161;
-}
-
-.ui.inverted.secondary.buttons .button:active,
-.ui.inverted.secondary.button:active {
-  background-color: #6e6e6e;
-}
-
-/* Inverted Basic */
-
-.ui.inverted.secondary.basic.buttons .button,
-.ui.inverted.secondary.buttons .basic.button,
-.ui.inverted.secondary.basic.button {
-  background-color: transparent;
-  -webkit-box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
-  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
-  color: #FFFFFF !important;
-}
-
-.ui.inverted.secondary.basic.buttons .button:hover,
-.ui.inverted.secondary.buttons .basic.button:hover,
-.ui.inverted.secondary.basic.button:hover {
-  -webkit-box-shadow: 0px 0px 0px 2px #616161 inset !important;
-  box-shadow: 0px 0px 0px 2px #616161 inset !important;
-  color: #545454 !important;
-}
-
-.ui.inverted.secondary.basic.buttons .button:focus,
-.ui.inverted.secondary.basic.buttons .button:focus,
-.ui.inverted.secondary.basic.button:focus {
-  -webkit-box-shadow: 0px 0px 0px 2px #686868 inset !important;
-  box-shadow: 0px 0px 0px 2px #686868 inset !important;
-  color: #545454 !important;
-}
-
-.ui.inverted.secondary.basic.buttons .active.button,
-.ui.inverted.secondary.buttons .basic.active.button,
-.ui.inverted.secondary.basic.active.button {
-  -webkit-box-shadow: 0px 0px 0px 2px #616161 inset !important;
-  box-shadow: 0px 0px 0px 2px #616161 inset !important;
-  color: #545454 !important;
-}
-
-.ui.inverted.secondary.basic.buttons .button:active,
-.ui.inverted.secondary.buttons .basic.button:active,
-.ui.inverted.secondary.basic.button:active {
-  -webkit-box-shadow: 0px 0px 0px 2px #6e6e6e inset !important;
-  box-shadow: 0px 0px 0px 2px #6e6e6e inset !important;
-  color: #545454 !important;
 }
 
 /*---------------
@@ -5120,7 +4948,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Container
+ * # Semantic UI 2.3.1 - Container
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -5281,7 +5109,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Divider
+ * # Semantic UI 2.3.1 - Divider
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -5532,6 +5360,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 
 .ui.horizontal.divider:before,
 .ui.horizontal.divider:after {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABaAAAAACCAYAAACuTHuKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1OThBRDY4OUNDMTYxMUU0OUE3NUVGOEJDMzMzMjE2NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1OThBRDY4QUNDMTYxMUU0OUE3NUVGOEJDMzMzMjE2NyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjU5OEFENjg3Q0MxNjExRTQ5QTc1RUY4QkMzMzMyMTY3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU5OEFENjg4Q0MxNjExRTQ5QTc1RUY4QkMzMzMyMTY3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+VU513gAAADVJREFUeNrs0DENACAQBDBIWLGBJQby/mUcJn5sJXQmOQMAAAAAAJqt+2prAAAAAACg2xdgANk6BEVuJgyMAAAAAElFTkSuQmCC');
 }
 
 @media only screen and (max-width: 767px) {
@@ -5547,7 +5376,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Flag
+ * # Semantic UI 2.3.1 - Flag
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -6823,7 +6652,7 @@ i.flag.zimbabwe:before {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Header
+ * # Semantic UI 2.3.1 - Header
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -7650,7 +7479,7 @@ a.ui.inverted.grey.header:hover {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Icon
+ * # Semantic UI 2.3.1 - Icon
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -8247,36 +8076,6 @@ for instance `lemon icon` not `lemon outline icon` since there is only one lemon
 /*******************************
             Icons
 *******************************/
-
-/* Deprecated *In/Out Naming Conflict) */
-
-i.icon.linkedin.in:before {
-  content: "\f0e1";
-}
-
-i.icon.zoom.in:before {
-  content: "\f00e";
-}
-
-i.icon.zoom.out:before {
-  content: "\f010";
-}
-
-i.icon.sign.in:before {
-  content: "\f2f6";
-}
-
-i.icon.in.cart:before {
-  content: "\f218";
-}
-
-i.icon.log.out:before {
-  content: "\f2f5";
-}
-
-i.icon.sign.out:before {
-  content: "\f2f5";
-}
 
 /* Icons */
 
@@ -10044,7 +9843,7 @@ i.icon.linkedin:before {
   content: "\f08c";
 }
 
-i.icon.linkedin.alt:before {
+i.icon.linkedin.in:before {
   content: "\f0e1";
 }
 
@@ -10792,8 +10591,16 @@ i.icon.shower:before {
   content: "\f2cc";
 }
 
+i.icon.sign.in.alternate:before {
+  content: "\f2f6";
+}
+
 i.icon.sign.language:before {
   content: "\f2a7";
+}
+
+i.icon.sign.out.alternate:before {
+  content: "\f2f5";
 }
 
 i.icon.signal:before {
@@ -12106,7 +11913,7 @@ i.icon.ils:before {
   content: "\f20b";
 }
 
-i.icon.in-cart:before {
+i.icon.in.cart:before {
   content: "\f218";
 }
 
@@ -12762,11 +12569,11 @@ i.icon.zip:before {
   content: "\f187";
 }
 
-i.icon.zoom-in:before {
+i.icon.zoom.in:before {
   content: "\f00e";
 }
 
-i.icon.zoom-out:before {
+i.icon.zoom.out:before {
   content: "\f010";
 }
 
@@ -12858,7 +12665,7 @@ i.icon.level.up:before {
   content: "\f3bf";
 }
 
-i.icon.logout:before {
+i.icon.log.out:before {
   content: "\f2f5";
 }
 
@@ -12898,11 +12705,11 @@ i.icon.resize.vertical:before {
   content: "\f338";
 }
 
-i.icon.sign-in:before {
+i.icon.sign.in:before {
   content: "\f2f6";
 }
 
-i.icon.sign-out:before {
+i.icon.sign.out:before {
   content: "\f2f5";
 }
 
@@ -13635,7 +13442,6 @@ i.icon.leanpub,
 i.icon.less,
 i.icon.linechat,
 i.icon.linkedin,
-i.icon.linkedin.alternate,
 i.icon.linkedin.in,
 i.icon.linode,
 i.icon.linux,
@@ -13769,7 +13575,6 @@ i.icon.vine,
 i.icon.vk,
 i.icon.vnv,
 i.icon.vuejs,
-i.icon.wechat,
 i.icon.weibo,
 i.icon.weixin,
 i.icon.whatsapp,
@@ -13802,7 +13607,7 @@ i.icon.youtube.square {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Image
+ * # Semantic UI 2.3.1 - Image
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -14124,7 +13929,7 @@ img.ui.bordered.image {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Input
+ * # Semantic UI 2.3.1 - Input
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -14696,7 +14501,7 @@ img.ui.bordered.image {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Label
+ * # Semantic UI 2.3.1 - Label
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -15277,7 +15082,7 @@ a.ui.red.label:hover {
 /* Basic */
 
 .ui.basic.red.label {
-  background-color: none #FFFFFF !important;
+  background-color: #FFFFFF !important;
   color: #DB2828 !important;
   border-color: #DB2828 !important;
 }
@@ -15323,7 +15128,7 @@ a.ui.orange.label:hover {
 /* Basic */
 
 .ui.basic.orange.label {
-  background-color: none #FFFFFF !important;
+  background-color: #FFFFFF !important;
   color: #F2711C !important;
   border-color: #F2711C !important;
 }
@@ -15369,7 +15174,7 @@ a.ui.yellow.label:hover {
 /* Basic */
 
 .ui.basic.yellow.label {
-  background-color: none #FFFFFF !important;
+  background-color: #FFFFFF !important;
   color: #FBBD08 !important;
   border-color: #FBBD08 !important;
 }
@@ -15415,7 +15220,7 @@ a.ui.olive.label:hover {
 /* Basic */
 
 .ui.basic.olive.label {
-  background-color: none #FFFFFF !important;
+  background-color: #FFFFFF !important;
   color: #B5CC18 !important;
   border-color: #B5CC18 !important;
 }
@@ -15461,7 +15266,7 @@ a.ui.green.label:hover {
 /* Basic */
 
 .ui.basic.green.label {
-  background-color: none #FFFFFF !important;
+  background-color: #FFFFFF !important;
   color: #21BA45 !important;
   border-color: #21BA45 !important;
 }
@@ -15507,7 +15312,7 @@ a.ui.teal.label:hover {
 /* Basic */
 
 .ui.basic.teal.label {
-  background-color: none #FFFFFF !important;
+  background-color: #FFFFFF !important;
   color: #00B5AD !important;
   border-color: #00B5AD !important;
 }
@@ -15553,7 +15358,7 @@ a.ui.blue.label:hover {
 /* Basic */
 
 .ui.basic.blue.label {
-  background-color: none #FFFFFF !important;
+  background-color: #FFFFFF !important;
   color: #2185D0 !important;
   border-color: #2185D0 !important;
 }
@@ -15599,7 +15404,7 @@ a.ui.violet.label:hover {
 /* Basic */
 
 .ui.basic.violet.label {
-  background-color: none #FFFFFF !important;
+  background-color: #FFFFFF !important;
   color: #6435C9 !important;
   border-color: #6435C9 !important;
 }
@@ -15645,7 +15450,7 @@ a.ui.purple.label:hover {
 /* Basic */
 
 .ui.basic.purple.label {
-  background-color: none #FFFFFF !important;
+  background-color: #FFFFFF !important;
   color: #A333C8 !important;
   border-color: #A333C8 !important;
 }
@@ -15691,7 +15496,7 @@ a.ui.pink.label:hover {
 /* Basic */
 
 .ui.basic.pink.label {
-  background-color: none #FFFFFF !important;
+  background-color: #FFFFFF !important;
   color: #E03997 !important;
   border-color: #E03997 !important;
 }
@@ -15737,7 +15542,7 @@ a.ui.brown.label:hover {
 /* Basic */
 
 .ui.basic.brown.label {
-  background-color: none #FFFFFF !important;
+  background-color: #FFFFFF !important;
   color: #A5673F !important;
   border-color: #A5673F !important;
 }
@@ -15783,7 +15588,7 @@ a.ui.grey.label:hover {
 /* Basic */
 
 .ui.basic.grey.label {
-  background-color: none #FFFFFF !important;
+  background-color: #FFFFFF !important;
   color: #767676 !important;
   border-color: #767676 !important;
 }
@@ -15829,7 +15634,7 @@ a.ui.black.label:hover {
 /* Basic */
 
 .ui.basic.black.label {
-  background-color: none #FFFFFF !important;
+  background-color: #FFFFFF !important;
   color: #1B1C1D !important;
   border-color: #1B1C1D !important;
 }
@@ -16127,7 +15932,7 @@ a.ui.basic.label:hover {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - List
+ * # Semantic UI 2.3.1 - List
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -17204,7 +17009,7 @@ ol.ui.horizontal.list li:before,
     User Variable Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Loader
+ * # Semantic UI 2.3.1 - Loader
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -17582,7 +17387,7 @@ ol.ui.horizontal.list li:before,
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Rail
+ * # Semantic UI 2.3.1 - Rail
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -17744,7 +17549,7 @@ ol.ui.horizontal.list li:before,
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Reveal
+ * # Semantic UI 2.3.1 - Reveal
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -18059,7 +17864,7 @@ ol.ui.horizontal.list li:before,
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Segment
+ * # Semantic UI 2.3.1 - Segment
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -18959,7 +18764,7 @@ ol.ui.horizontal.list li:before,
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Step
+ * # Semantic UI 2.3.1 - Step
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -19649,7 +19454,7 @@ ol.ui.horizontal.list li:before,
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Breadcrumb
+ * # Semantic UI 2.3.1 - Breadcrumb
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -19780,7 +19585,7 @@ ol.ui.horizontal.list li:before,
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Form
+ * # Semantic UI 2.3.1 - Form
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -20959,7 +20764,7 @@ ol.ui.horizontal.list li:before,
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Grid
+ * # Semantic UI 2.3.1 - Grid
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -25563,7 +25368,7 @@ Floated Menu / Item
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Message
+ * # Semantic UI 2.3.1 - Message
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -26133,7 +25938,7 @@ Floated Menu / Item
         Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Table
+ * # Semantic UI 2.3.1 - Table
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -27428,7 +27233,7 @@ Floated Menu / Item
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Ad
+ * # Semantic UI 2.3.1 - Ad
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -27717,7 +27522,7 @@ Floated Menu / Item
     User Variable Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Item
+ * # Semantic UI 2.3.1 - Item
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -28824,7 +28629,7 @@ a.ui.card:hover,
     User Variable Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Comment
+ * # Semantic UI 2.3.1 - Comment
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -29110,7 +28915,7 @@ a.ui.card:hover,
     User Variable Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Feed
+ * # Semantic UI 2.3.1 - Feed
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -29423,7 +29228,7 @@ a.ui.card:hover,
     User Variable Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Item
+ * # Semantic UI 2.3.1 - Item
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -29944,7 +29749,7 @@ a.ui.card:hover,
     User Variable Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Statistic
+ * # Semantic UI 2.3.1 - Statistic
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -30011,7 +29816,7 @@ a.ui.card:hover,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin: 0em 1.5em 1em;
+  margin: 0em 1.5em 2em;
   max-width: auto;
 }
 
@@ -30019,7 +29824,7 @@ a.ui.card:hover,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 1em -1.5em -1em;
+  margin: 1em -1.5em -2em;
 }
 
 /* Clearing */
@@ -30035,6 +29840,10 @@ a.ui.card:hover,
 
 .ui.statistics:first-child {
   margin-top: 0em;
+}
+
+.ui.statistics:last-child {
+  margin-bottom: 0em;
 }
 
 /*******************************
@@ -30135,93 +29944,93 @@ a.ui.card:hover,
 ---------------*/
 
 .ui.ten.statistics {
-  margin: 0em 0em -1em;
+  margin: 0em 0em -2em;
 }
 
 .ui.ten.statistics .statistic {
   min-width: 10%;
-  margin: 0em 0em 1em;
+  margin: 0em 0em 2em;
 }
 
 .ui.nine.statistics {
-  margin: 0em 0em -1em;
+  margin: 0em 0em -2em;
 }
 
 .ui.nine.statistics .statistic {
   min-width: 11.11111111%;
-  margin: 0em 0em 1em;
+  margin: 0em 0em 2em;
 }
 
 .ui.eight.statistics {
-  margin: 0em 0em -1em;
+  margin: 0em 0em -2em;
 }
 
 .ui.eight.statistics .statistic {
   min-width: 12.5%;
-  margin: 0em 0em 1em;
+  margin: 0em 0em 2em;
 }
 
 .ui.seven.statistics {
-  margin: 0em 0em -1em;
+  margin: 0em 0em -2em;
 }
 
 .ui.seven.statistics .statistic {
   min-width: 14.28571429%;
-  margin: 0em 0em 1em;
+  margin: 0em 0em 2em;
 }
 
 .ui.six.statistics {
-  margin: 0em 0em -1em;
+  margin: 0em 0em -2em;
 }
 
 .ui.six.statistics .statistic {
   min-width: 16.66666667%;
-  margin: 0em 0em 1em;
+  margin: 0em 0em 2em;
 }
 
 .ui.five.statistics {
-  margin: 0em 0em -1em;
+  margin: 0em 0em -2em;
 }
 
 .ui.five.statistics .statistic {
   min-width: 20%;
-  margin: 0em 0em 1em;
+  margin: 0em 0em 2em;
 }
 
 .ui.four.statistics {
-  margin: 0em 0em -1em;
+  margin: 0em 0em -2em;
 }
 
 .ui.four.statistics .statistic {
   min-width: 25%;
-  margin: 0em 0em 1em;
+  margin: 0em 0em 2em;
 }
 
 .ui.three.statistics {
-  margin: 0em 0em -1em;
+  margin: 0em 0em -2em;
 }
 
 .ui.three.statistics .statistic {
   min-width: 33.33333333%;
-  margin: 0em 0em 1em;
+  margin: 0em 0em 2em;
 }
 
 .ui.two.statistics {
-  margin: 0em 0em -1em;
+  margin: 0em 0em -2em;
 }
 
 .ui.two.statistics .statistic {
   min-width: 50%;
-  margin: 0em 0em 1em;
+  margin: 0em 0em 2em;
 }
 
 .ui.one.statistics {
-  margin: 0em 0em -1em;
+  margin: 0em 0em -2em;
 }
 
 .ui.one.statistics .statistic {
   min-width: 100%;
-  margin: 0em 0em 1em;
+  margin: 0em 0em 2em;
 }
 
 /*--------------
@@ -30576,7 +30385,7 @@ a.ui.card:hover,
     User Variable Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Accordion
+ * # Semantic UI 2.3.1 - Accordion
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -30839,7 +30648,7 @@ a.ui.card:hover,
         User Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Checkbox
+ * # Semantic UI 2.3.1 - Checkbox
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -31514,7 +31323,7 @@ a.ui.card:hover,
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Dimmer
+ * # Semantic UI 2.3.1 - Dimmer
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -31767,7 +31576,7 @@ body.dimmable > .dimmer {
         User Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Dropdown
+ * # Semantic UI 2.3.1 - Dropdown
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -33353,6 +33162,7 @@ select.ui.dropdown {
 
 @font-face {
   font-family: 'Dropdown';
+  src: url(data:application/x-font-ttf;charset=utf-8;base64,AAEAAAALAIAAAwAwT1MvMggjB5AAAAC8AAAAYGNtYXAPfuIIAAABHAAAAExnYXNwAAAAEAAAAWgAAAAIZ2x5Zjo82LgAAAFwAAABVGhlYWQAQ88bAAACxAAAADZoaGVhAwcB6QAAAvwAAAAkaG10eAS4ABIAAAMgAAAAIGxvY2EBNgDeAAADQAAAABJtYXhwAAoAFgAAA1QAAAAgbmFtZVcZpu4AAAN0AAABRXBvc3QAAwAAAAAEvAAAACAAAwIAAZAABQAAAUwBZgAAAEcBTAFmAAAA9QAZAIQAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAABAAADw2gHg/+D/4AHgACAAAAABAAAAAAAAAAAAAAAgAAAAAAACAAAAAwAAABQAAwABAAAAFAAEADgAAAAKAAgAAgACAAEAIPDa//3//wAAAAAAIPDX//3//wAB/+MPLQADAAEAAAAAAAAAAAAAAAEAAf//AA8AAQAAAAAAAAAAAAIAADc5AQAAAAABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAAAQAAAIABJQElABMAABM0NzY3BTYXFhUUDwEGJwYvASY1AAUGBwEACAUGBoAFCAcGgAUBEgcGBQEBAQcECQYHfwYBAQZ/BwYAAQAAAG4BJQESABMAADc0PwE2MzIfARYVFAcGIyEiJyY1AAWABgcIBYAGBgUI/wAHBgWABwaABQWABgcHBgUFBgcAAAABABIASQC3AW4AEwAANzQ/ATYXNhcWHQEUBwYnBi8BJjUSBoAFCAcFBgYFBwgFgAbbBwZ/BwEBBwQJ/wgEBwEBB38GBgAAAAABAAAASQClAW4AEwAANxE0NzYzMh8BFhUUDwEGIyInJjUABQYHCAWABgaABQgHBgVbAQAIBQYGgAUIBwWABgYFBwAAAAEAAAABAADZuaKOXw889QALAgAAAAAA0ABHWAAAAADQAEdYAAAAAAElAW4AAAAIAAIAAAAAAAAAAQAAAeD/4AAAAgAAAAAAASUAAQAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAABAAAAASUAAAElAAAAtwASALcAAAAAAAAACgAUAB4AQgBkAIgAqgAAAAEAAAAIABQAAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAOAK4AAQAAAAAAAQAOAAAAAQAAAAAAAgAOAEcAAQAAAAAAAwAOACQAAQAAAAAABAAOAFUAAQAAAAAABQAWAA4AAQAAAAAABgAHADIAAQAAAAAACgA0AGMAAwABBAkAAQAOAAAAAwABBAkAAgAOAEcAAwABBAkAAwAOACQAAwABBAkABAAOAFUAAwABBAkABQAWAA4AAwABBAkABgAOADkAAwABBAkACgA0AGMAaQBjAG8AbQBvAG8AbgBWAGUAcgBzAGkAbwBuACAAMQAuADAAaQBjAG8AbQBvAG8Abmljb21vb24AaQBjAG8AbQBvAG8AbgBSAGUAZwB1AGwAYQByAGkAYwBvAG0AbwBvAG4ARgBvAG4AdAAgAGcAZQBuAGUAcgBhAHQAZQBkACAAYgB5ACAASQBjAG8ATQBvAG8AbgAuAAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=) format('truetype'), url(data:application/font-woff;charset=utf-8;base64,d09GRk9UVE8AAAVwAAoAAAAABSgAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABDRkYgAAAA9AAAAdkAAAHZLDXE/09TLzIAAALQAAAAYAAAAGAIIweQY21hcAAAAzAAAABMAAAATA9+4ghnYXNwAAADfAAAAAgAAAAIAAAAEGhlYWQAAAOEAAAANgAAADYAQ88baGhlYQAAA7wAAAAkAAAAJAMHAelobXR4AAAD4AAAACAAAAAgBLgAEm1heHAAAAQAAAAABgAAAAYACFAAbmFtZQAABAgAAAFFAAABRVcZpu5wb3N0AAAFUAAAACAAAAAgAAMAAAEABAQAAQEBCGljb21vb24AAQIAAQA6+BwC+BsD+BgEHgoAGVP/i4seCgAZU/+LiwwHi2v4lPh0BR0AAACIDx0AAACNER0AAAAJHQAAAdASAAkBAQgPERMWGyAlKmljb21vb25pY29tb29udTB1MXUyMHVGMEQ3dUYwRDh1RjBEOXVGMERBAAACAYkABgAIAgABAAQABwAKAA0AVgCfAOgBL/yUDvyUDvyUDvuUDvtvi/emFYuQjZCOjo+Pj42Qiwj3lIsFkIuQiY6Hj4iNhouGi4aJh4eHCPsU+xQFiIiGiYaLhouHjYeOCPsU9xQFiI+Jj4uQCA77b4v3FBWLkI2Pjo8I9xT3FAWPjo+NkIuQi5CJjogI9xT7FAWPh42Hi4aLhomHh4eIiIaJhosI+5SLBYaLh42HjoiPiY+LkAgO+92d928Vi5CNkI+OCPcU9xQFjo+QjZCLkIuPiY6Hj4iNhouGCIv7lAWLhomHh4iIh4eJhouGi4aNiI8I+xT3FAWHjomPi5AIDvvdi+YVi/eUBYuQjZCOjo+Pj42Qi5CLkImOhwj3FPsUBY+IjYaLhouGiYeHiAj7FPsUBYiHhomGi4aLh42Hj4iOiY+LkAgO+JQU+JQViwwKAAAAAAMCAAGQAAUAAAFMAWYAAABHAUwBZgAAAPUAGQCEAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAA8NoB4P/g/+AB4AAgAAAAAQAAAAAAAAAAAAAAIAAAAAAAAgAAAAMAAAAUAAMAAQAAABQABAA4AAAACgAIAAIAAgABACDw2v/9//8AAAAAACDw1//9//8AAf/jDy0AAwABAAAAAAAAAAAAAAABAAH//wAPAAEAAAABAAA5emozXw889QALAgAAAAAA0ABHWAAAAADQAEdYAAAAAAElAW4AAAAIAAIAAAAAAAAAAQAAAeD/4AAAAgAAAAAAASUAAQAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAABAAAAASUAAAElAAAAtwASALcAAAAAUAAACAAAAAAADgCuAAEAAAAAAAEADgAAAAEAAAAAAAIADgBHAAEAAAAAAAMADgAkAAEAAAAAAAQADgBVAAEAAAAAAAUAFgAOAAEAAAAAAAYABwAyAAEAAAAAAAoANABjAAMAAQQJAAEADgAAAAMAAQQJAAIADgBHAAMAAQQJAAMADgAkAAMAAQQJAAQADgBVAAMAAQQJAAUAFgAOAAMAAQQJAAYADgA5AAMAAQQJAAoANABjAGkAYwBvAG0AbwBvAG4AVgBlAHIAcwBpAG8AbgAgADEALgAwAGkAYwBvAG0AbwBvAG5pY29tb29uAGkAYwBvAG0AbwBvAG4AUgBlAGcAdQBsAGEAcgBpAGMAbwBtAG8AbwBuAEYAbwBuAHQAIABnAGUAbgBlAHIAYQB0AGUAZAAgAGIAeQAgAEkAYwBvAE0AbwBvAG4ALgAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -33413,7 +33223,7 @@ select.ui.dropdown {
         User Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Video
+ * # Semantic UI 2.3.1 - Video
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -33578,7 +33388,7 @@ select.ui.dropdown {
   padding-bottom: 42.85714286%;
 }
 /*!
- * # Semantic UI 2.3.3 - Modal
+ * # Semantic UI 2.3.1 - Modal
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -34230,7 +34040,7 @@ select.ui.dropdown {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Nag
+ * # Semantic UI 2.3.1 - Nag
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -34376,7 +34186,7 @@ a.ui.nag {
         User Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Popup
+ * # Semantic UI 2.3.1 - Popup
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -35206,7 +35016,7 @@ a.ui.nag {
         User Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Progress Bar
+ * # Semantic UI 2.3.1 - Progress Bar
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -35788,7 +35598,7 @@ a.ui.nag {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Rating
+ * # Semantic UI 2.3.1 - Rating
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -36065,7 +35875,7 @@ a.ui.nag {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Search
+ * # Semantic UI 2.3.1 - Search
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -36535,7 +36345,7 @@ a.ui.nag {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Shape
+ * # Semantic UI 2.3.1 - Shape
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -36695,7 +36505,7 @@ a.ui.nag {
         User Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Sidebar
+ * # Semantic UI 2.3.1 - Sidebar
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -37380,7 +37190,7 @@ body.pushable > .pusher {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Sticky
+ * # Semantic UI 2.3.1 - Sticky
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -37454,7 +37264,7 @@ body.pushable > .pusher {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Tab
+ * # Semantic UI 2.3.1 - Tab
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -37542,7 +37352,7 @@ body.pushable > .pusher {
         User Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Transition
+ * # Semantic UI 2.3.1 - Transition
  * http://github.com/semantic-org/semantic-ui/
  *
  *

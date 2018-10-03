@@ -9,6 +9,7 @@
     <span class="title">楼层编号：</span>
     <span id="builBandTitle" style="display: none;margin-left: 15px;"></span>
     <select class="ui dropdown" v-model="buildingId" value="<?php echo $_SESSION["buildingId"] ?>" size="6"  id="buildingId">
+        <option value="6378">碧桃20栋</option>
         <option value="1177">碧桃21栋</option>
         <option value="1250">碧桃24栋</option>
         <option value="1623">碧桃25栋</option>
@@ -58,7 +59,6 @@
         <option value="6290">红棉东栋</option>
         <option value="6320">红枫B栋</option>
         <option value="6326">红棉西栋</option>
-        <option value="6378">碧桃20栋</option>
         <option value="6481">丹桂26栋</option>
         <option value="6546">黄田坝6栋</option>
         <option value="6610">黄田坝10栋</option>
@@ -66,8 +66,8 @@
         <option value="6767">黄田坝9栋</option>
         <option value="6849">紫竹A栋</option>
         <option value="6988">紫竹B栋</option>
-        <option value="7169">樱花苑栋</option>
-        <option value="7444">梧桐苑栋</option>
+        <option value="7169">樱花苑</option>
+        <option value="7444">梧桐苑</option>
     </select>
 </div>
 <button id="setRoom" style="width: 100%;line-height: 100%" class="ui primary button <?php if($_SESSION["isExist"]=="yes")echo "hasBend";else echo ""; ?>"><i style="display: none;" class="fa fa-spinner fa-pulse"id="log"></i><span id="bend"><?php if($_SESSION["isExist"]=="yes")echo "取消绑定";else echo "绑定"; ?></span></button>

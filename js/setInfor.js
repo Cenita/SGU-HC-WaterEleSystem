@@ -2,6 +2,19 @@ $(
   function()
   {
     ini();
+	function setCookie(name, value, liveMinutes) {  
+			if (liveMinutes == undefined || liveMinutes == null) {
+				liveMinutes = 60 * 2;
+			}
+			if (typeof (liveMinutes) != 'number') {
+				liveMinutes = 60 * 2;//默认120分钟
+			}
+			var minutes = liveMinutes * 60 * 1000;
+			var exp = new Date();
+			exp.setTime(exp.getTime() + minutes + 8 * 3600 * 1000);
+			//path=/表示全站有效，而不是当前页
+			document.cookie = name + "=" + value + ";path=/;expires=" + exp.toUTCString();
+		}
     function ini()
     {
       if($("#bend").text()=="取消绑定")

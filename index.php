@@ -15,26 +15,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.min.js"></script>
-  <script src="https://cdn.bootcss.com/semantic-ui/2.3.1/semantic.min.js"></script>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/vue.min.js"></script>
   <script type="text/javascript" src="js/weCheck.js"></script>
   <script type="text/javascript" src="js/jquery.rotate.min.js"></script>
+  <script type="text/javascript" src="js/Semantic/semantic.min.js"></script>
   <script type="text/javascript" src="js/EasterEgg.js"></script>
-  <script type="text/javascript">
-      (function() {
-       var s = document.createElement('script');
-       s.type = 'text/javascript';
-       s.async = true;
-       s.src = 'https://cdn.bootcss.com/echarts/4.1.0.rc2/echarts.js';
-       var x = document.getElementsByTagName('script')[0];
-       x.parentNode.insertBefore(s, x);
-    })();
-  </script>
+  <script type="text/javascript" src="js/echarts.min.js"></script>
   <script type="text/javascript" src="js/setInfor.js"></script>
-  <script src="js/nav.js"></script>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://cdn.bootcss.com/semantic-ui/2.3.1/semantic.min.css" rel="stylesheet">
+  <script type="text/javascript" src="js/nav.js"></script>
+  <link rel="stylesheet" href="js/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="js/Semantic/semantic.css">
   <link rel="stylesheet" href="css/index.css">
   <title><?php if($_SESSION["roomName"]=="")echo "韶关学院水电查询";else echo $_SESSION["roomName"]."的水电费"; ?></title>
 </head>
