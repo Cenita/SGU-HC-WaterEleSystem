@@ -21,9 +21,9 @@
         <option value="1688">丹竹A栋</option>
         <option value="1811">丹竹B栋</option>
         <option value="1924">丹竹C栋</option>
+        <option value="2202">碧桂A栋</option>
         <option value="2047">碧桂B栋</option>
         <option value="2114">碧桂C栋</option>
-        <option value="2202">碧桂A栋</option>
         <option value="2317">红枫A栋</option>
         <option value="2710">海棠A栋</option>
         <option value="2807">海棠B栋</option>
