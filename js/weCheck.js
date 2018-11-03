@@ -44,6 +44,7 @@ $(
         sendStyle.sendPost=false;
         sendStyle.loading=true;
         sendStyle.judgeExist=false;
+        $.ajax({type:'POST', dataType:"json", url:"php/sendRecord.php", data:{type:"1"}})
         $.ajax({
           type:'GET',
           url:'WaterEleCheck.php',

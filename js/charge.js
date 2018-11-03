@@ -1,6 +1,7 @@
 $(
   function()
   {
+    $.ajax({type:'POST', dataType:"json", url:"php/sendRecord.php", data:{type:"4"}})
     $.ajax({
       type:'GET',
       url:'WaterEleCheck.php',

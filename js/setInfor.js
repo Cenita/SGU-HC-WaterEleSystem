@@ -99,6 +99,7 @@ $(
         $("#bend").hide();
         $("#log").show();
         $("#roomDisExist").hide();
+        $.ajax({type:'POST', dataType:"json", url:"php/sendRecord.php", data:{type:"0"}})
         $.ajax(
           {
             type:'GET',

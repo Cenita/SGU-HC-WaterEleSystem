@@ -15,6 +15,7 @@ $(
         $("#waterTips").hide();
         $(this).addClass("in-search");
         $("#waterSearchPart .eleItem").remove();
+        $.ajax({type:'POST', dataType:"json", url:"php/sendRecord.php", data:{type:"3"}})
         $.ajax(
           {
             type:"GET",
@@ -64,6 +65,7 @@ $("#eleSearch").click(function(){
   $("#eleTips").hide();
   $(this).addClass("in-search");
   $("#eleSearchPart .eleItem").remove();
+  $.ajax({type:'POST', dataType:"json", url:"php/sendRecord.php", data:{type:"2"}})
   $.ajax(
     {
       type:"GET",
