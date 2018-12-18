@@ -9,6 +9,7 @@
        header("location:error.html");
      if($page!="set"&&$_SESSION["isExist"]!="yes") header("location:?page=set");
      $_SESSION['key']=$sendKey;
+     
 ?>
 <html lang="en">
 <head>
@@ -43,6 +44,7 @@
           <span class="setButton <?php if($page=="set"){echo "inPage";}else{echo "outPage";if($_SESSION["isExist"]=="yes")echo " canSele";}?>" a1="set">设置</span>
       </div>
             <?php
+
               if($page=="index")
               {
                   include "wechechpage.php";

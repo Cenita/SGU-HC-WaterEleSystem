@@ -13,10 +13,10 @@ $(
       waterRecord:"156.8",
       eleRecord:"20.6",
       averWaterOfSix:"52",
-      averWaterOfThree:"50",
+      WaterMonthly:"50",
       waterEndData:"2018-6-65",
       averEleOfSix:"165",
-      averEleOfThree:"15",
+      EleMonthly:"15",
       eleEndDate:"2018-3-25",
       roomName:"错误",
       judgeExist:false,
@@ -44,7 +44,6 @@ $(
         sendStyle.sendPost=false;
         sendStyle.loading=true;
         sendStyle.judgeExist=false;
-        $.ajax({type:'POST', dataType:"json", url:"php/sendRecord.php", data:{type:"1"}})
         $.ajax({
           type:'GET',
           url:'WaterEleCheck.php',
@@ -75,16 +74,30 @@ $(
             sendStyle.roomName=re.roomName+"的水电费";
             //水
             sendStyle.waterRecord=re.waterRecord.now;
-            sendStyle.averWaterOfThree=re.waterRecord.userAverageOfDayOfThree;
+            sendStyle.WaterMonthly=(re.waterRecord.userAverageOfDayOfSix*30).toFixed(1);
             sendStyle.averWaterOfSix=re.waterRecord.userAverageOfDayOfSix;
             var date=re.waterRecord.userEndDate.split(":");
             sendStyle.waterEndData=date[0]+"年"+date[1]+"月"+date[2]+"日";
+            if(date[0]=="null")
+            {
+              $("#sixDayWaterPart .forecastEndDay").hide();
+              $("#sixDayWaterPart .averageOfSixDay").hide();
+              $("#sixDayWaterPart .averageOfThreeDay").hide();
+              $("#waterGraph").hide();
+            }
             //电
             sendStyle.eleRecord=re.eleRecord.now;
             sendStyle.averEleOfSix=re.eleRecord.userAverageOfDayOfSix;
-            sendStyle.averEleOfThree=re.eleRecord.userAverageOfDayOfThree;
+            sendStyle.EleMonthly=(re.eleRecord.userAverageOfDayOfSix*30).toFixed(1);
             var date=re.eleRecord.userEndDate.split(":");
             sendStyle.eleEndDate=date[0]+"年"+date[1]+"月"+date[2]+"日";
+            if(date[0]=="null")
+            {
+              $("#sixDayElePart .forecastEndDay").hide();
+              $("#sixDayElePart .averageOfSixDay").hide();
+              $("#sixDayElePart .averageOfThreeDay").hide();
+              $("#eleGraph").hide();
+            }
             //列表
             initionGraph(re);
             //小创ai
@@ -95,13 +108,13 @@ $(
             {
               if(eleInMoney!=0)
               aiText="电费快不够了哦！小创建议你充值"+eleInMoney+"元";
-              else {aiText="哦嚯！这间宿舍好像存在一些问题";}
+              else {aiText="哦嚯！服务器出现了一些小问题";}
             }
             else if(re.eleRecord.leftDay<=5)
             {
               if(eleInMoney!=0)
               aiText="快停电啦！小创建议你充"+eleInMoney+"元";
-              else {aiText="哦嚯！这间宿舍好像存在一些问题";}
+              else {aiText="哦嚯！服务器出现了一些小问题";}
             }
             else if(re.eleRecord.leftDay<=30&&re.eleRecord.leftDay>=20)
             {aiText="还不用担心电费问题哦！";}
@@ -118,14 +131,14 @@ $(
               if(waterInMoney!=0)
               {aiText="水费快不够了哦！小创建议你充值"+waterInMoney+"元";}
               else
-              {aiText="哦嚯！这间宿舍好像存在一些问题";}
+              {aiText="哦嚯！服务器出现了一些小问题";}
             }
             else if(re.waterRecord.leftDay<=5)
             {
               if(waterInMoney!=0)
               {aiText="快停水了哦！小创建议你充值"+waterInMoney+"元";}
               else
-              {aiText="哦嚯！这间宿舍好像存在一些问题";}
+              {aiText="哦嚯！服务器出现了一些小问题";}
             }
             else if(re.waterRecord.leftDay<=20&&re.waterRecord.leftDay>10)
             {
@@ -140,7 +153,7 @@ $(
               aiText="水还能用很久！毫不慌张！";
             }
             sendStyle.waterHint=aiText;
-
+            $.ajax({type:'POST', dataType:"json", url:"php/sendRecord.php", data:{type:"1"}})
           },
           error:function(re)
           {

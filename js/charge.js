@@ -1,7 +1,6 @@
 $(
   function()
   {
-    $.ajax({type:'POST', dataType:"json", url:"php/sendRecord.php", data:{type:"4"}})
     $.ajax({
       type:'GET',
       url:'WaterEleCheck.php',
@@ -17,6 +16,7 @@ $(
           $("#TopUpPart .list").append("<div class=\"item eleItem\"><div>"+re.topUpRecord.money[i]+"</div><div>"+re.topUpRecord.type[i]+"</div><div>"+re.topUpRecord.date[i]+"</div></div>");
         }
         $(".loading").hide();
+        $.ajax({type:'POST', dataType:"json", url:"php/sendRecord.php", data:{type:"4"}})
       },
       error:function(re)
       {

@@ -11,6 +11,11 @@
      echo "error";
      return;
  }
+ if(!empty($_SESSION["allData"]))
+ {
+ 	echo $_SESSION["allData"];
+ 	return;
+ }
  //爬虫
  $roomMate=$_GET["roomId"];
  $buildingId=$_GET["buildingId"];
@@ -21,19 +26,29 @@
  $ch = curl_init();
  header("Access-Control-Allow-Origin: *");
  date_default_timezone_set("PRC");
- curl_setopt($ch, CURLOPT_URL, $addressHtml);
- curl_setopt($ch, CURLOPT_HEADER, 0);
- curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
- curl_setopt($ch, CURLOPT_COOKIEJAR, $cookie_jar);
- $content = curl_exec($ch);
- curl_close($ch);
+ if(empty($_SESSION["idBySession"]))
+ {
+    curl_setopt($ch, CURLOPT_URL, $addressHtml);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+    //curl_setopt($ch, CURLOPT_COOKIEJAR, $cookie_jar);
+    curl_setopt($ch,CURLOPT_HEADER, 1);
+    $ret = curl_exec($ch);
+    curl_close($ch);
+    list($header, $body) = explode("\r\n\r\n", $ret);
+    preg_match("/set\-cookie:([^\r\n]*)/i", $header, $matches);
+    $_SESSION["idBySession"]=$matches[1];
+ }
+ //echo $_SESSION["idBySession"];
  $ch = curl_init();
  curl_setopt($ch, CURLOPT_URL, $loginHtml);
- curl_setopt($ch, CURLOPT_COOKIEFILE, $cookie_jar);
  curl_setopt($ch, CURLOPT_HEADER, 0);
  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+ curl_setopt($ch, CURLOPT_COOKIE, $_SESSION["idBySession"]);
  $ret = curl_exec($ch);
  curl_close($ch);
+ //echo $ret;
+ //echo $ret;
  $waterEleHtml=new simple_html_dom();
  $waterEleHtml->load($ret);
  //统计数据
@@ -50,6 +65,7 @@
     $temp=$usedEle->find("td");
     $roomName=$temp[0]->plaintext;
     $waterRecord[$intI]=$temp[5]->plaintext;
+   // echo $temp[5]->plaintext;
     $waterDate[$intI]=explode($thisYear,explode(" ",strval($temp[6]->plaintext))[2])[1];
     $intI++;
  }
@@ -97,8 +113,14 @@
          $temp2+=$addEle;
      }
  }
- $waterAverageOfThree=round($temp1/$WaterCount,3);
- $eleAverageOfThree=round($temp2/$eleCount,3);
+ if($WaterCount&&$temp1)
+ 	$waterAverageOfThree=round($temp1/$WaterCount,3);
+ else
+ 	$waterAverageOfThree=0;
+ if($eleCount&&$temp2)
+ 	$eleAverageOfThree=round($temp2/$eleCount,3);
+ else
+ 	$eleAverageOfThree=0;
  $temp1=0;
  $temp2=0;
  $WaterCount=0;
@@ -118,8 +140,14 @@
          $temp2+=$addEle;
      }
  }
- $waterAverageOfSix=round($temp1/$WaterCount,3);
- $eleAverageOfSix=round($temp2/$eleCount,3);
+ if($WaterCount)
+ 	$waterAverageOfSix=round($temp1/$WaterCount,3);
+ else
+ 	$waterAverageOfSix=0;
+ if($eleCount)
+ 	$eleAverageOfSix=round($temp2/$eleCount,3);
+ else
+ 	$waterAverageOfSix=0;
  $waterCanUseDayNum=1;
  $eleCanUseDayNum=1;
  if($waterAverageOfThree>0)
@@ -162,6 +190,7 @@
      $totalSave["topUpRecord"]["type"][$i]=$topUpRecord["type"][$i];
      $totalSave["topUpRecord"]["date"][$i]=$topUpRecord["date"][$i];
  }
+ $_SESSION["allData"]=json_encode($totalSave);
 echo json_encode($totalSave);
 $waterEleHtml->clear();
 ?>

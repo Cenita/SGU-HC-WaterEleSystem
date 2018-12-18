@@ -9,15 +9,9 @@
     $ch = curl_init();
     header("Access-Control-Allow-Origin: *");
     date_default_timezone_set("PRC");
-    curl_setopt($ch, CURLOPT_URL, $addressHtml);
-    curl_setopt($ch, CURLOPT_HEADER, 0);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_COOKIEJAR, $cookie_jar);//产生一个cooke文件
-    $content = curl_exec($ch);
-    curl_close($ch);
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $loginHtml);
-    curl_setopt($ch, CURLOPT_COOKIEFILE, $cookie_jar);
+    curl_setopt($ch, CURLOPT_COOKIE, $_SESSION["idBySession"]);
     curl_setopt($ch, CURLOPT_HEADER, 0);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     $ret = curl_exec($ch);

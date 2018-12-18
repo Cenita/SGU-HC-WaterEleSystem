@@ -1,7 +1,6 @@
 <?php
     include ("../../js/simpleHtmlDom/simple_html_dom.php");
     error_reporting(E_ALL^E_NOTICE^E_WARNING);
-    $cookie_jar = "pic.cookie";
     header("content-Type: text/html; charset=Utf-8");
     session_start();
     $dokey=strval($_SESSION['key']);
@@ -21,15 +20,20 @@
     $ch = curl_init();
     header("Access-Control-Allow-Origin: *");
     date_default_timezone_set("PRC");
+    unset($_SESSION["allData"]);
     curl_setopt($ch, CURLOPT_URL, $addressHtml);
-    curl_setopt($ch, CURLOPT_HEADER, 0);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_COOKIEJAR, $cookie_jar);
-    $content = curl_exec($ch);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+    //curl_setopt($ch, CURLOPT_COOKIEJAR, $cookie_jar);
+    curl_setopt($ch,CURLOPT_HEADER, 1);
+    $ret = curl_exec($ch);
     curl_close($ch);
+    list($header, $body) = explode("\r\n\r\n", $ret);
+    preg_match("/set\-cookie:([^\r\n]*)/i", $header, $matches);
+    $_SESSION["idBySession"]=$matches[1];
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $loginHtml);
-    curl_setopt($ch, CURLOPT_COOKIEFILE, $cookie_jar);
+    curl_setopt($ch, CURLOPT_COOKIE, $_SESSION["idBySession"]);
     curl_setopt($ch, CURLOPT_HEADER, 0);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     $ret = curl_exec($ch);
@@ -50,9 +54,9 @@
     {
         $isExist="no";
     }
-    setcookie("isExist",$isExist,time()+2592000,"/");
-    setcookie("roomId",$roomMate,time()+2592000,"/");
-    setcookie("buildingId",$buildingId,time()+2592000,"/");
+    setcookie("isExist",$isExist,time()+604800,"/");
+    setcookie("roomId",$roomMate,time()+604800,"/");
+    setcookie("buildingId",$buildingId,time()+604800,"/");
     $infor=Array(
       "isExist"=>$isExist,
       "roomName"=>$roomName

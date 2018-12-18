@@ -2,6 +2,10 @@
 {
   max-height:20rem!important;
 }
+.dropdown
+{
+  float: right;
+}
 .declare
 {
   position: relative;
